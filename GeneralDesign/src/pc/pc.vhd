@@ -33,6 +33,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity pc is
     Port ( clk : in STD_LOGIC;
+           enable : in STD_LOGIC;
            reset : in STD_LOGIC;
            pc_load : in STD_LOGIC;
            jump_addr : in STD_LOGIC_VECTOR (2 downto 0);
@@ -43,10 +44,11 @@ architecture Behavioral of pc is
 
 component pc_register
     port(
-        clk   : in std_logic;
-        reset : in std_logic;
-        D     : in std_logic_vector(2 downto 0);
-        Q     : out std_logic_vector(2 downto 0)
+        clk    : in std_logic;
+        enable : in std_logic;
+        reset  : in std_logic;
+        D      : in std_logic_vector(2 downto 0);
+        Q      : out std_logic_vector(2 downto 0)
     );
 end component;
 
@@ -75,6 +77,7 @@ begin
 U1: pc_register
     port map(
         clk   => clk,
+        enable => enable,
         reset => reset,
         D     => pc_next,
         Q     => pc_reg

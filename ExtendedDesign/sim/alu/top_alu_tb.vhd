@@ -76,14 +76,24 @@ begin
 
     stim_proc : process
     begin
+    --index no : 240288D - 0011 1010 1010 1010 0000
+            -- : 240294R - 0011 1010 1010 1010 0110 
+            -- : 240297E - 0011 1010 1010 1010 1001
+            -- : 240312A - 0011 1010 1010 1011 1000
+    
         -- Unsigned compare (alu_op = "010")
         alu_op <= "010";
-        -- 5 > 3
-        A <= "0101"; B <= "0011"; wait for 10 ns;
-        -- 3 = 3
-        A <= "0011"; B <= "0011"; wait for 10 ns;
-        -- 2 < 7
-        A <= "0010"; B <= "0111"; wait for 10 ns;
+        -- 0 < 10
+        A <= "0000"; B <= "1010"; wait for 10 ns;
+        -- 10 > 16
+        A <= "1010"; B <= "0110"; wait for 10 ns;
+        -- 9 < 10
+        A <= "1001"; B <= "1010"; wait for 10 ns;
+        -- 8 < 11
+        A <= "1000"; B <= "1011"; wait for 10 ns;
+        -- 7 = 7 
+        A <= "0111"; B <= "0111"; wait for 10 ns;
+        
 
         -- Signed compare (alu_op = "011")
         alu_op <= "011";
@@ -103,3 +113,5 @@ begin
     end process;
 
 end behavioral;
+
+

@@ -38,21 +38,20 @@ entity Adder_3bit is
 end Adder_3bit;
 
 architecture Behavioral of Adder_3bit is
+component HA
+        Port (
+            A : in  STD_LOGIC;
+            B : in  STD_LOGIC;
+            S : out STD_LOGIC;
+            C : out STD_LOGIC
+        );
+    end component;
 
-component rca_4bit
-    port(
-        A     : in  std_logic_vector(3 downto 0);
-        B     : in  std_logic_vector(3 downto 0);
-        C_in  : in  std_logic;
-        S     : out std_logic_vector(3 downto 0);
-        C_out : out std_logic
-    );
-end component;
-signal A_ext : std_logic_vector(3 downto 0);
-signal one   : std_logic_vector(3 downto 0) := "0001";
-signal sum   : std_logic_vector(3 downto 0);
-
+   signal c0, c1: std_logic;
 begin
-    Y <= std_logic_vector(unsigned(A)+1);
+    
+    Bit0: HA port map (A => A(0), B => '1',   S => Y(0), C => c0);
+    Bit1: HA port map (A => A(1), B => c0,    S => Y(1), C => c1);
+    Bit2: HA port map (A => A(2), B => c1,    S => Y(2), C => open);
 
 end Behavioral;

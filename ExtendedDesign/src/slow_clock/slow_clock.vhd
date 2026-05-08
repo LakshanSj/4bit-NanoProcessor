@@ -44,7 +44,7 @@ begin
 process(clk_in)
 begin
     if rising_edge(clk_in) then
-        if count = 4 then
+        if count = 5 then
             enable <= '1';
             count <= (others => '0');
         else

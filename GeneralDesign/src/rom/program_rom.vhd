@@ -40,13 +40,7 @@ end program_rom;
 architecture Behavioral of program_rom is
 
 type rom_array is array (0 to 7) of std_logic_vector(11 downto 0);
-    -- Test program:
-    -- 0: MOVI R1, 5
-    -- 1: MOVI R2, 3
-    -- 2: ADD  R1, R2   (R1 ? R1+R2)
-    -- 3: NEG  R1       (R1 ? -R1)
-    -- 4: JZR  R1, 0    (won't jump because R1 != 0)
-    -- 5: JZR  R0, 0    (always jumps to 0 - infinite loop)
+
     constant ROM : rom_array := (
        0 => "101110000000",   -- MOVI R7, 0   (R7 = 0)
        1 => "100010000001",   -- MOVI R1, 1   (R1 = 1)
@@ -55,8 +49,9 @@ type rom_array is array (0 to 7) of std_logic_vector(11 downto 0);
        4 => "001110010000",   -- ADD  R7, R1  (R7 = 1+2 = 3)
        5 => "100010000011",   -- MOVI R1, 3   (R1 = 3)
        6 => "001110010000",   -- ADD  R7, R1  (R7 = 3+3 = 6)
-       7 => "110000000110",   -- (unused)
+       7 => "110000000000",   -- JZR  R0, 0
         others => (others => '0')
+
     );
 begin
     data <= ROM(to_integer(unsigned(addr)));

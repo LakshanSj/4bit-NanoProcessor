@@ -1,0 +1,24 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../src/alu/ADD_SUB_4bit.vhd" \
+"../../../../../src/pc/Adder_3bit.vhd" \
+"../../../../../src/alu/FA.vhd" \
+"../../../../../src/alu/HA.vhd" \
+"../../../../../src/mux/MUX2_3bit.vhd" \
+"../../../../../src/top/Nanoprocessor.vhd" \
+"../../../../../src/alu/RCA_4bit.vhd" \
+"../../../../../src/decoder/decoder_3_to_8.vhd" \
+"../../../../../src/registers/flags.vhd" \
+"../../../../../src/instruction_decoder/instruction_decoder.vhd" \
+"../../../../../src/mux/mux2_4bit.vhd" \
+"../../../../../src/mux/mux8_4bit.vhd" \
+"../../../../../src/pc/pc.vhd" \
+"../../../../../src/pc/pc_register.vhd" \
+"../../../../../src/rom/program_rom.vhd" \
+"../../../../../src/registers/register_4bit.vhd" \
+"../../../../../src/registers/register_bank.vhd" \
+"../../../../../src/slow_clock/slow_clock.vhd" \
+"../../../../../sim/top/Nanoprocessor_tb.vhd" \
+
+# Do not sort compile order
+nosort

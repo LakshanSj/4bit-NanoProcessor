@@ -75,12 +75,34 @@ begin
     stim_proc: process
     begin
         enable <= '0';
-        reset <= '1';   pc_load <= '0'; jump_addr <= "001"; wait for 25 ns;
-        reset <= '0';   enable <= '1';                      wait for 70 ns;
-                        pc_load <= '1'; jump_addr <= "110"; wait for 25 ns;
-                        pc_load <= '0';                      wait for 70 ns;
-        reset <= '1';                                         wait for 25 ns;
+        reset <= '1';   
+        pc_load <= '0'; jump_addr <= "001"; wait for 25 ns;
+        reset <= '0';   
+        enable <= '1';                      wait for 70 ns;
+                        
+        pc_load <= '1'; jump_addr <= "110"; wait for 25 ns;
+        pc_load <= '0';                     wait for 70 ns;
+        
+        -- index No : 240297 - 111 010 101 010 101 001
+        
+        pc_load <= '1'; jump_addr <= "111"; wait for 25 ns; 
+        pc_load <= '0';                     wait for 70 ns;
+
+        pc_load <= '1'; jump_addr <= "010"; wait for 25 ns; 
+        pc_load <= '0';                     wait for 70 ns;
+
+        pc_load <= '1'; jump_addr <= "101"; wait for 25 ns; 
+        pc_load <= '0';                     wait for 70 ns;
+
+        pc_load <= '1'; jump_addr <= "010"; wait for 25 ns; 
+        pc_load <= '0';                     wait for 70 ns;
+        
+        pc_load <= '1'; jump_addr <= "001"; wait for 25 ns; 
+        pc_load <= '0';                     wait for 70 ns;
+                        
+        reset <= '1';wait for 25 ns;
         wait;
     end process;
 
 end Behavioral;
+

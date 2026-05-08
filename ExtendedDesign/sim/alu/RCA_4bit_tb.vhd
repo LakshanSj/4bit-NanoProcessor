@@ -54,20 +54,21 @@ uut: RCA_4bit port map (
         S     => S,
         C_out => C_out
     );
-
+--index no : 240288D - 0011 1010 1010 1010 0000 
 stim_proc: process
 begin
     A <= "0000"; B <= "0000"; C_in <= '0'; wait for 10 ns;
-    A <= "0001"; B <= "0001"; C_in <= '0'; wait for 10 ns;
-    A <= "0010"; B <= "0011"; C_in <= '0'; wait for 10 ns;
-    A <= "0101"; B <= "0101"; C_in <= '0'; wait for 10 ns;
-    A <= "1111"; B <= "0001"; C_in <= '0'; wait for 10 ns;
-    A <= "1111"; B <= "1111"; C_in <= '0'; wait for 10 ns;
-    A <= "0000"; B <= "0000"; C_in <= '1'; wait for 10 ns;
-    A <= "0001"; B <= "0001"; C_in <= '1'; wait for 10 ns;
-    A <= "1111"; B <= "0000"; C_in <= '1'; wait for 10 ns;
-    A <= "1111"; B <= "1111"; C_in <= '1'; wait for 10 ns;
+    A <= "0000"; B <= "1010"; C_in <= '0'; wait for 10 ns;
+    A <= "1010"; B <= "1010"; C_in <= '0'; wait for 10 ns;
+    A <= "1010"; B <= "0011"; C_in <= '0'; wait for 10 ns;
+    A <= "0011"; B <= "0011"; C_in <= '0'; wait for 10 ns;
+    A <= "0000"; B <= "1111"; C_in <= '0'; wait for 10 ns;
+    A <= "0000"; B <= "1010"; C_in <= '1'; wait for 10 ns;
+    A <= "1010"; B <= "1010"; C_in <= '1'; wait for 10 ns;
+    A <= "1010"; B <= "1011"; C_in <= '1'; wait for 10 ns;
+    A <= "0011"; B <= "0011"; C_in <= '1'; wait for 10 ns;
     wait;
 end process;
 
 end Behavioral;
+

@@ -1,0 +1,509 @@
+
+*** Running vivado
+    with args -log system_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_top.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source system_top.tcl -notrace
+Command: synth_design -top system_top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 30452 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 410.551 ; gain = 96.598
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'system_top' [C:/Drive/Aca/COD/codd project/enhanced_version/src/7seg/seven_seg_top.vhd:47]
+INFO: [Synth 8-3491] module 'Nanoprocessor' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/top/Nanoprocessor.vhd:35' bound to instance 'U_CPU' of component 'Nanoprocessor' [C:/Drive/Aca/COD/codd project/enhanced_version/src/7seg/seven_seg_top.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'Nanoprocessor' [C:/Drive/Aca/COD/codd project/enhanced_version/src/top/Nanoprocessor.vhd:51]
+INFO: [Synth 8-3491] module 'slow_clock' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/slow_clock/slow_clock.vhd:35' bound to instance 'slow_clk' of component 'slow_clock' [C:/Drive/Aca/COD/codd project/enhanced_version/src/top/Nanoprocessor.vhd:219]
+INFO: [Synth 8-638] synthesizing module 'slow_clock' [C:/Drive/Aca/COD/codd project/enhanced_version/src/slow_clock/slow_clock.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'slow_clock' (1#1) [C:/Drive/Aca/COD/codd project/enhanced_version/src/slow_clock/slow_clock.vhd:40]
+INFO: [Synth 8-3491] module 'program_rom' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/rom/program_rom.vhd:35' bound to instance 'u_rom' of component 'program_rom' [C:/Drive/Aca/COD/codd project/enhanced_version/src/top/Nanoprocessor.vhd:224]
+INFO: [Synth 8-638] synthesizing module 'program_rom' [C:/Drive/Aca/COD/codd project/enhanced_version/src/rom/program_rom.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'program_rom' (2#1) [C:/Drive/Aca/COD/codd project/enhanced_version/src/rom/program_rom.vhd:40]
+INFO: [Synth 8-3491] module 'instruction_decoder' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/instruction_decoder/instruction_decoder.vhd:34' bound to instance 'u_decoder' of component 'instruction_decoder' [C:/Drive/Aca/COD/codd project/enhanced_version/src/top/Nanoprocessor.vhd:231]
+INFO: [Synth 8-638] synthesizing module 'instruction_decoder' [C:/Drive/Aca/COD/codd project/enhanced_version/src/instruction_decoder/instruction_decoder.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'instruction_decoder' (3#1) [C:/Drive/Aca/COD/codd project/enhanced_version/src/instruction_decoder/instruction_decoder.vhd:46]
+INFO: [Synth 8-3491] module 'inst_selector' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/extra/inst_selector.vhd:34' bound to instance 'u_inst_sel' of component 'inst_selector' [C:/Drive/Aca/COD/codd project/enhanced_version/src/top/Nanoprocessor.vhd:244]
+INFO: [Synth 8-638] synthesizing module 'inst_selector' [C:/Drive/Aca/COD/codd project/enhanced_version/src/extra/inst_selector.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'inst_selector' (4#1) [C:/Drive/Aca/COD/codd project/enhanced_version/src/extra/inst_selector.vhd:45]
+INFO: [Synth 8-3491] module 'pc' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/pc/pc.vhd:34' bound to instance 'u_pc' of component 'pc' [C:/Drive/Aca/COD/codd project/enhanced_version/src/top/Nanoprocessor.vhd:255]
+INFO: [Synth 8-638] synthesizing module 'pc' [C:/Drive/Aca/COD/codd project/enhanced_version/src/pc/pc.vhd:43]
+INFO: [Synth 8-3491] module 'pc_register' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/pc/pc_register.vhd:34' bound to instance 'U1' of component 'pc_register' [C:/Drive/Aca/COD/codd project/enhanced_version/src/pc/pc.vhd:77]
+INFO: [Synth 8-638] synthesizing module 'pc_register' [C:/Drive/Aca/COD/codd project/enhanced_version/src/pc/pc_register.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'pc_register' (5#1) [C:/Drive/Aca/COD/codd project/enhanced_version/src/pc/pc_register.vhd:42]
+INFO: [Synth 8-3491] module 'Adder_3bit' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/pc/Adder_3bit.vhd:35' bound to instance 'U2' of component 'adder_3bit' [C:/Drive/Aca/COD/codd project/enhanced_version/src/pc/pc.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'Adder_3bit' [C:/Drive/Aca/COD/codd project/enhanced_version/src/pc/Adder_3bit.vhd:40]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/HA.vhd:34' bound to instance 'Bit0' of component 'HA' [C:/Drive/Aca/COD/codd project/enhanced_version/src/pc/Adder_3bit.vhd:53]
+INFO: [Synth 8-638] synthesizing module 'HA' [C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/HA.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'HA' (6#1) [C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/HA.vhd:41]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/HA.vhd:34' bound to instance 'Bit1' of component 'HA' [C:/Drive/Aca/COD/codd project/enhanced_version/src/pc/Adder_3bit.vhd:54]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/HA.vhd:34' bound to instance 'Bit2' of component 'HA' [C:/Drive/Aca/COD/codd project/enhanced_version/src/pc/Adder_3bit.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'Adder_3bit' (7#1) [C:/Drive/Aca/COD/codd project/enhanced_version/src/pc/Adder_3bit.vhd:40]
+INFO: [Synth 8-3491] module 'MUX2_3bit' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/mux/MUX2_3bit.vhd:34' bound to instance 'U3' of component 'mux2_3bit' [C:/Drive/Aca/COD/codd project/enhanced_version/src/pc/pc.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'MUX2_3bit' [C:/Drive/Aca/COD/codd project/enhanced_version/src/mux/MUX2_3bit.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'MUX2_3bit' (8#1) [C:/Drive/Aca/COD/codd project/enhanced_version/src/mux/MUX2_3bit.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'pc' (9#1) [C:/Drive/Aca/COD/codd project/enhanced_version/src/pc/pc.vhd:43]
+INFO: [Synth 8-3491] module 'flags' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/flags.vhd:34' bound to instance 'u_flags' of component 'flags' [C:/Drive/Aca/COD/codd project/enhanced_version/src/top/Nanoprocessor.vhd:266]
+INFO: [Synth 8-638] synthesizing module 'flags' [C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/flags.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'flags' (10#1) [C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/flags.vhd:53]
+INFO: [Synth 8-3491] module 'register_bank' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/register_bank.vhd:35' bound to instance 'u_regbank' of component 'register_bank' [C:/Drive/Aca/COD/codd project/enhanced_version/src/top/Nanoprocessor.vhd:286]
+INFO: [Synth 8-638] synthesizing module 'register_bank' [C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/register_bank.vhd:45]
+INFO: [Synth 8-3491] module 'decoder_3_to_8' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/decoder/decoder_3_to_8.vhd:34' bound to instance 'DEC' of component 'decoder_3_to_8' [C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/register_bank.vhd:64]
+INFO: [Synth 8-638] synthesizing module 'decoder_3_to_8' [C:/Drive/Aca/COD/codd project/enhanced_version/src/decoder/decoder_3_to_8.vhd:40]
+INFO: [Synth 8-226] default block is never used [C:/Drive/Aca/COD/codd project/enhanced_version/src/decoder/decoder_3_to_8.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'decoder_3_to_8' (11#1) [C:/Drive/Aca/COD/codd project/enhanced_version/src/decoder/decoder_3_to_8.vhd:40]
+INFO: [Synth 8-3491] module 'register_4bit' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/register_4bit.vhd:34' bound to instance 'REG0' of component 'register_4bit' [C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/register_bank.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'register_4bit' [C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/register_4bit.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'register_4bit' (12#1) [C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/register_4bit.vhd:43]
+INFO: [Synth 8-3491] module 'register_4bit' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/register_4bit.vhd:34' bound to instance 'REG1' of component 'register_4bit' [C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/register_bank.vhd:68]
+INFO: [Synth 8-3491] module 'register_4bit' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/register_4bit.vhd:34' bound to instance 'REG2' of component 'register_4bit' [C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/register_bank.vhd:69]
+INFO: [Synth 8-3491] module 'register_4bit' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/register_4bit.vhd:34' bound to instance 'REG3' of component 'register_4bit' [C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/register_bank.vhd:70]
+INFO: [Synth 8-3491] module 'register_4bit' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/register_4bit.vhd:34' bound to instance 'REG4' of component 'register_4bit' [C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/register_bank.vhd:71]
+INFO: [Synth 8-3491] module 'register_4bit' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/register_4bit.vhd:34' bound to instance 'REG5' of component 'register_4bit' [C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/register_bank.vhd:72]
+INFO: [Synth 8-3491] module 'register_4bit' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/register_4bit.vhd:34' bound to instance 'REG6' of component 'register_4bit' [C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/register_bank.vhd:73]
+INFO: [Synth 8-3491] module 'register_4bit' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/register_4bit.vhd:34' bound to instance 'REG7' of component 'register_4bit' [C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/register_bank.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'register_bank' (13#1) [C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/register_bank.vhd:45]
+INFO: [Synth 8-3491] module 'mux8_4bit' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/mux/mux8_4bit.vhd:34' bound to instance 'u_muxA' of component 'mux8_4bit' [C:/Drive/Aca/COD/codd project/enhanced_version/src/top/Nanoprocessor.vhd:305]
+INFO: [Synth 8-638] synthesizing module 'mux8_4bit' [C:/Drive/Aca/COD/codd project/enhanced_version/src/mux/mux8_4bit.vhd:42]
+INFO: [Synth 8-226] default block is never used [C:/Drive/Aca/COD/codd project/enhanced_version/src/mux/mux8_4bit.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'mux8_4bit' (14#1) [C:/Drive/Aca/COD/codd project/enhanced_version/src/mux/mux8_4bit.vhd:42]
+INFO: [Synth 8-3491] module 'mux8_4bit' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/mux/mux8_4bit.vhd:34' bound to instance 'u_muxB' of component 'mux8_4bit' [C:/Drive/Aca/COD/codd project/enhanced_version/src/top/Nanoprocessor.vhd:314]
+INFO: [Synth 8-3491] module 'top_alu' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/top_alu.vhd:34' bound to instance 'u_alu' of component 'top_alu' [C:/Drive/Aca/COD/codd project/enhanced_version/src/top/Nanoprocessor.vhd:323]
+INFO: [Synth 8-638] synthesizing module 'top_alu' [C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/top_alu.vhd:47]
+INFO: [Synth 8-3491] module 'binOp' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/extra/binOp.vhd:34' bound to instance 'logic_unit' of component 'binOp' [C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/top_alu.vhd:86]
+INFO: [Synth 8-638] synthesizing module 'binOp' [C:/Drive/Aca/COD/codd project/enhanced_version/src/extra/binOp.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'binOp' (15#1) [C:/Drive/Aca/COD/codd project/enhanced_version/src/extra/binOp.vhd:41]
+INFO: [Synth 8-3491] module 'ADD_SUB_4bit' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/ADD_SUB_4bit.vhd:34' bound to instance 'arith_unit' of component 'ADD_SUB_4bit' [C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/top_alu.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'ADD_SUB_4bit' [C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/ADD_SUB_4bit.vhd:44]
+INFO: [Synth 8-3491] module 'RCA_4bit' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/RCA_4bit.vhd:34' bound to instance 'U1' of component 'RCA_4bit' [C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/ADD_SUB_4bit.vhd:62]
+INFO: [Synth 8-638] synthesizing module 'RCA_4bit' [C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/RCA_4bit.vhd:42]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/FA.vhd:34' bound to instance 'FA_0' of component 'FA' [C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/RCA_4bit.vhd:57]
+INFO: [Synth 8-638] synthesizing module 'FA' [C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/FA.vhd:42]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/HA.vhd:34' bound to instance 'HA_0' of component 'HA' [C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/FA.vhd:53]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/HA.vhd:34' bound to instance 'HA_1' of component 'HA' [C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/FA.vhd:59]
+INFO: [Synth 8-256] done synthesizing module 'FA' (16#1) [C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/FA.vhd:42]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/FA.vhd:34' bound to instance 'FA_1' of component 'FA' [C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/RCA_4bit.vhd:58]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/FA.vhd:34' bound to instance 'FA_2' of component 'FA' [C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/RCA_4bit.vhd:59]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/FA.vhd:34' bound to instance 'FA_3' of component 'FA' [C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/RCA_4bit.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'RCA_4bit' (17#1) [C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/RCA_4bit.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'ADD_SUB_4bit' (18#1) [C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/ADD_SUB_4bit.vhd:44]
+INFO: [Synth 8-3491] module 'comparator' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/extra/comparator.vhd:34' bound to instance 'comp_unit' of component 'comparator' [C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/top_alu.vhd:107]
+INFO: [Synth 8-638] synthesizing module 'comparator' [C:/Drive/Aca/COD/codd project/enhanced_version/src/extra/comparator.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'comparator' (19#1) [C:/Drive/Aca/COD/codd project/enhanced_version/src/extra/comparator.vhd:41]
+INFO: [Synth 8-226] default block is never used [C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/top_alu.vhd:118]
+INFO: [Synth 8-256] done synthesizing module 'top_alu' (20#1) [C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/top_alu.vhd:47]
+INFO: [Synth 8-3491] module 'mux2_4bit' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/mux/mux2_4bit.vhd:34' bound to instance 'u_wb_mux' of component 'mux2_4bit' [C:/Drive/Aca/COD/codd project/enhanced_version/src/top/Nanoprocessor.vhd:338]
+INFO: [Synth 8-638] synthesizing module 'mux2_4bit' [C:/Drive/Aca/COD/codd project/enhanced_version/src/mux/mux2_4bit.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'mux2_4bit' (21#1) [C:/Drive/Aca/COD/codd project/enhanced_version/src/mux/mux2_4bit.vhd:41]
+INFO: [Synth 8-3491] module 'mux8_4bit' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/mux/mux8_4bit.vhd:34' bound to instance 'u_mux_jzr' of component 'mux8_4bit' [C:/Drive/Aca/COD/codd project/enhanced_version/src/top/Nanoprocessor.vhd:347]
+INFO: [Synth 8-3491] module 'step_button' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/extra/step_button.vhd:34' bound to instance 'u_step' of component 'step_button' [C:/Drive/Aca/COD/codd project/enhanced_version/src/top/Nanoprocessor.vhd:355]
+INFO: [Synth 8-638] synthesizing module 'step_button' [C:/Drive/Aca/COD/codd project/enhanced_version/src/extra/step_button.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'step_button' (22#1) [C:/Drive/Aca/COD/codd project/enhanced_version/src/extra/step_button.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'Nanoprocessor' (23#1) [C:/Drive/Aca/COD/codd project/enhanced_version/src/top/Nanoprocessor.vhd:51]
+INFO: [Synth 8-3491] module 'seven_seg' declared at 'C:/Drive/Aca/COD/codd project/enhanced_version/src/7seg/7seg.vhd:35' bound to instance 'U_SEG' of component 'seven_seg' [C:/Drive/Aca/COD/codd project/enhanced_version/src/7seg/seven_seg_top.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'seven_seg' [C:/Drive/Aca/COD/codd project/enhanced_version/src/7seg/7seg.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'seven_seg' (24#1) [C:/Drive/Aca/COD/codd project/enhanced_version/src/7seg/7seg.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'system_top' (25#1) [C:/Drive/Aca/COD/codd project/enhanced_version/src/7seg/seven_seg_top.vhd:47]
+WARNING: [Synth 8-3331] design instruction_decoder has unconnected port instruction[3]
+WARNING: [Synth 8-3331] design instruction_decoder has unconnected port instruction[2]
+WARNING: [Synth 8-3331] design instruction_decoder has unconnected port instruction[1]
+WARNING: [Synth 8-3331] design instruction_decoder has unconnected port instruction[0]
+WARNING: [Synth 8-3331] design system_top has unconnected port sw[14]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 465.789 ; gain = 151.836
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 465.789 ; gain = 151.836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 465.789 ; gain = 151.836
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Drive/Aca/COD/codd project/enhanced_version/constrains/Nanoprocessor.xdc]
+Finished Parsing XDC File [C:/Drive/Aca/COD/codd project/enhanced_version/constrains/Nanoprocessor.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Drive/Aca/COD/codd project/enhanced_version/constrains/Nanoprocessor.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 798.262 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 798.262 ; gain = 484.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 798.262 ; gain = 484.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 798.262 ; gain = 484.309
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "enable" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "zero" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sub_sel" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "zero" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "jzr_zero" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 798.262 ; gain = 484.309
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     26 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      4 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 17    
++---Registers : 
+	               26 Bit    Registers := 1     
+	               14 Bit    Registers := 1     
+	                4 Bit    Registers := 8     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     26 Bit        Muxes := 1     
+	   8 Input     14 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 3     
+	   8 Input      7 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	  12 Input      3 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	  12 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module system_top 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+Module slow_clock 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     26 Bit       Adders := 1     
++---Registers : 
+	               26 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module program_rom 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input     14 Bit        Muxes := 1     
+Module instruction_decoder 
+Detailed RTL Component Info : 
++---Muxes : 
+	  12 Input      3 Bit        Muxes := 4     
+	  12 Input      1 Bit        Muxes := 3     
+Module inst_selector 
+Detailed RTL Component Info : 
++---Registers : 
+	               14 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 1     
+Module pc_register 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
+Module HA 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module MUX2_3bit 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+Module flags 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 5     
+Module decoder_3_to_8 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+Module register_4bit 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+Module ADD_SUB_4bit 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module comparator 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 4     
+Module top_alu 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input      4 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module mux2_4bit 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+Module step_button 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module Nanoprocessor 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module seven_seg 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 2     
+	   8 Input      7 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5544] ROM "jzr_zero" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "U_CPU/u_regbank/DEC/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "U_CPU/slow_clk/enable" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
+WARNING: [Synth 8-3917] design system_top has port an[3] driven by constant 1
+WARNING: [Synth 8-3917] design system_top has port an[2] driven by constant 1
+WARNING: [Synth 8-3331] design system_top has unconnected port sw[14]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 798.262 ; gain = 484.309
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 798.262 ; gain = 484.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 803.609 ; gain = 489.656
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 803.820 ; gain = 489.867
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 803.820 ; gain = 489.867
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 803.820 ; gain = 489.867
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 803.820 ; gain = 489.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 803.820 ; gain = 489.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 803.820 ; gain = 489.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 803.820 ; gain = 489.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    12|
+|3     |LUT1   |     4|
+|4     |LUT2   |     3|
+|5     |LUT3   |     9|
+|6     |LUT4   |     9|
+|7     |LUT5   |    23|
+|8     |LUT6   |    63|
+|9     |MUXF7  |    11|
+|10    |FDCE   |    40|
+|11    |FDRE   |    60|
+|12    |IBUF   |    18|
+|13    |OBUF   |    20|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------------+----------------+------+
+|      |Instance       |Module          |Cells |
++------+---------------+----------------+------+
+|1     |top            |                |   273|
+|2     |  U_CPU        |Nanoprocessor   |   210|
+|3     |    slow_clk   |slow_clock      |    41|
+|4     |    u_flags    |flags           |     5|
+|5     |    u_inst_sel |inst_selector   |    56|
+|6     |    u_pc       |pc              |    16|
+|7     |      U1       |pc_register     |    16|
+|8     |    u_regbank  |register_bank   |    88|
+|9     |      REG0     |register_4bit   |     4|
+|10    |      REG1     |register_4bit_0 |     4|
+|11    |      REG2     |register_4bit_1 |     4|
+|12    |      REG3     |register_4bit_2 |    41|
+|13    |      REG4     |register_4bit_3 |     4|
+|14    |      REG5     |register_4bit_4 |     4|
+|15    |      REG6     |register_4bit_5 |     4|
+|16    |      REG7     |register_4bit_6 |    23|
+|17    |    u_step     |step_button     |     4|
++------+---------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 803.820 ; gain = 489.867
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 803.820 ; gain = 157.395
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 803.820 ; gain = 489.867
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 41 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+113 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:48 . Memory (MB): peak = 807.391 ; gain = 506.262
+INFO: [Common 17-1381] The checkpoint 'C:/Drive/Aca/COD/codd project/enhanced_version/enhanced_version/enhanced_version.runs/synth_1/system_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file system_top_utilization_synth.rpt -pb system_top_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 807.391 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri May  8 19:18:53 2026...

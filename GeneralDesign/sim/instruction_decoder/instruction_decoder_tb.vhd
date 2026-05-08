@@ -78,7 +78,17 @@ begin
     instruction <= "100100001001"; zero_flag <= '0'; wait for 10 ns;
     instruction <= "111000000101"; zero_flag <= '0'; wait for 10 ns;
     instruction <= "111000000101"; zero_flag <= '1'; wait for 10 ns;
+        
+    instruction <= "100100100000"; zero_flag <= '0'; wait for 10 ns; -- 240288 pattern
+    instruction <= "100100101110"; zero_flag <= '0'; wait for 10 ns; -- 240294 pattern
+    instruction <= "100100101001"; zero_flag <= '0'; wait for 10 ns; -- 240297 pattern
+    instruction <= "100110000000"; zero_flag <= '0'; wait for 10 ns; -- 240312 pattern
+
+    -- variation with zero_flag dependency
+    instruction <= "100100101110"; zero_flag <= '1'; wait for 10 ns;
+    instruction <= "100110000000"; zero_flag <= '1'; wait for 10 ns;
     wait;
 end process;
 
 end Behavioral;
+

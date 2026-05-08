@@ -14,88 +14,94 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6140 
+INFO: Helper process launched with PID 22488 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 409.941 ; gain = 97.289
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 411.609 ; gain = 97.836
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'system_top' [C:/Drive/Aca/COD/codd project/final/codd project/src/7seg/seven_seg_top.vhd:45]
-INFO: [Synth 8-3491] module 'Nanoprocessor' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/top/Nanoprocessor.vhd:34' bound to instance 'U_CPU' of component 'Nanoprocessor' [C:/Drive/Aca/COD/codd project/final/codd project/src/7seg/seven_seg_top.vhd:75]
-INFO: [Synth 8-638] synthesizing module 'Nanoprocessor' [C:/Drive/Aca/COD/codd project/final/codd project/src/top/Nanoprocessor.vhd:44]
-INFO: [Synth 8-3491] module 'slow_clock' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/slow_clock/slow_clock.vhd:34' bound to instance 'u_slow_clk' of component 'slow_clock' [C:/Drive/Aca/COD/codd project/final/codd project/src/top/Nanoprocessor.vhd:156]
-INFO: [Synth 8-638] synthesizing module 'slow_clock' [C:/Drive/Aca/COD/codd project/final/codd project/src/slow_clock/slow_clock.vhd:39]
-INFO: [Synth 8-256] done synthesizing module 'slow_clock' (1#1) [C:/Drive/Aca/COD/codd project/final/codd project/src/slow_clock/slow_clock.vhd:39]
-INFO: [Synth 8-3491] module 'program_rom' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/rom/program_rom.vhd:35' bound to instance 'u_rom' of component 'program_rom' [C:/Drive/Aca/COD/codd project/final/codd project/src/top/Nanoprocessor.vhd:163]
-INFO: [Synth 8-638] synthesizing module 'program_rom' [C:/Drive/Aca/COD/codd project/final/codd project/src/rom/program_rom.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'program_rom' (2#1) [C:/Drive/Aca/COD/codd project/final/codd project/src/rom/program_rom.vhd:40]
-INFO: [Synth 8-3491] module 'instruction_decoder' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/instruction_decoder/instruction_decoder.vhd:34' bound to instance 'u_decoder' of component 'instruction_decoder' [C:/Drive/Aca/COD/codd project/final/codd project/src/top/Nanoprocessor.vhd:170]
-INFO: [Synth 8-638] synthesizing module 'instruction_decoder' [C:/Drive/Aca/COD/codd project/final/codd project/src/instruction_decoder/instruction_decoder.vhd:46]
-INFO: [Synth 8-226] default block is never used [C:/Drive/Aca/COD/codd project/final/codd project/src/instruction_decoder/instruction_decoder.vhd:63]
-INFO: [Synth 8-256] done synthesizing module 'instruction_decoder' (3#1) [C:/Drive/Aca/COD/codd project/final/codd project/src/instruction_decoder/instruction_decoder.vhd:46]
-INFO: [Synth 8-3491] module 'pc' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/pc/pc.vhd:34' bound to instance 'u_pc' of component 'pc' [C:/Drive/Aca/COD/codd project/final/codd project/src/top/Nanoprocessor.vhd:184]
-INFO: [Synth 8-638] synthesizing module 'pc' [C:/Drive/Aca/COD/codd project/final/codd project/src/pc/pc.vhd:42]
-INFO: [Synth 8-3491] module 'pc_register' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/pc/pc_register.vhd:34' bound to instance 'U1' of component 'pc_register' [C:/Drive/Aca/COD/codd project/final/codd project/src/pc/pc.vhd:75]
-INFO: [Synth 8-638] synthesizing module 'pc_register' [C:/Drive/Aca/COD/codd project/final/codd project/src/pc/pc_register.vhd:41]
-INFO: [Synth 8-256] done synthesizing module 'pc_register' (4#1) [C:/Drive/Aca/COD/codd project/final/codd project/src/pc/pc_register.vhd:41]
-INFO: [Synth 8-3491] module 'Adder_3bit' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/pc/Adder_3bit.vhd:35' bound to instance 'U2' of component 'adder_3bit' [C:/Drive/Aca/COD/codd project/final/codd project/src/pc/pc.vhd:84]
-INFO: [Synth 8-638] synthesizing module 'Adder_3bit' [C:/Drive/Aca/COD/codd project/final/codd project/src/pc/Adder_3bit.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'Adder_3bit' (5#1) [C:/Drive/Aca/COD/codd project/final/codd project/src/pc/Adder_3bit.vhd:40]
-INFO: [Synth 8-3491] module 'MUX2_3bit' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/mux/MUX2_3bit.vhd:34' bound to instance 'U3' of component 'mux2_3bit' [C:/Drive/Aca/COD/codd project/final/codd project/src/pc/pc.vhd:91]
-INFO: [Synth 8-638] synthesizing module 'MUX2_3bit' [C:/Drive/Aca/COD/codd project/final/codd project/src/mux/MUX2_3bit.vhd:41]
-INFO: [Synth 8-256] done synthesizing module 'MUX2_3bit' (6#1) [C:/Drive/Aca/COD/codd project/final/codd project/src/mux/MUX2_3bit.vhd:41]
-INFO: [Synth 8-256] done synthesizing module 'pc' (7#1) [C:/Drive/Aca/COD/codd project/final/codd project/src/pc/pc.vhd:42]
-INFO: [Synth 8-3491] module 'register_bank' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/registers/register_bank.vhd:35' bound to instance 'u_regbank' of component 'register_bank' [C:/Drive/Aca/COD/codd project/final/codd project/src/top/Nanoprocessor.vhd:194]
-INFO: [Synth 8-638] synthesizing module 'register_bank' [C:/Drive/Aca/COD/codd project/final/codd project/src/registers/register_bank.vhd:45]
-INFO: [Synth 8-3491] module 'decoder_3_to_8' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/decoder/decoder_3_to_8.vhd:34' bound to instance 'DEC' of component 'decoder_3_to_8' [C:/Drive/Aca/COD/codd project/final/codd project/src/registers/register_bank.vhd:64]
-INFO: [Synth 8-638] synthesizing module 'decoder_3_to_8' [C:/Drive/Aca/COD/codd project/final/codd project/src/decoder/decoder_3_to_8.vhd:40]
-INFO: [Synth 8-226] default block is never used [C:/Drive/Aca/COD/codd project/final/codd project/src/decoder/decoder_3_to_8.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'decoder_3_to_8' (8#1) [C:/Drive/Aca/COD/codd project/final/codd project/src/decoder/decoder_3_to_8.vhd:40]
-INFO: [Synth 8-3491] module 'register_4bit' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/registers/register_4bit.vhd:34' bound to instance 'REG0' of component 'register_4bit' [C:/Drive/Aca/COD/codd project/final/codd project/src/registers/register_bank.vhd:67]
-INFO: [Synth 8-638] synthesizing module 'register_4bit' [C:/Drive/Aca/COD/codd project/final/codd project/src/registers/register_4bit.vhd:42]
-INFO: [Synth 8-256] done synthesizing module 'register_4bit' (9#1) [C:/Drive/Aca/COD/codd project/final/codd project/src/registers/register_4bit.vhd:42]
-INFO: [Synth 8-3491] module 'register_4bit' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/registers/register_4bit.vhd:34' bound to instance 'REG1' of component 'register_4bit' [C:/Drive/Aca/COD/codd project/final/codd project/src/registers/register_bank.vhd:68]
-INFO: [Synth 8-3491] module 'register_4bit' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/registers/register_4bit.vhd:34' bound to instance 'REG2' of component 'register_4bit' [C:/Drive/Aca/COD/codd project/final/codd project/src/registers/register_bank.vhd:69]
-INFO: [Synth 8-3491] module 'register_4bit' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/registers/register_4bit.vhd:34' bound to instance 'REG3' of component 'register_4bit' [C:/Drive/Aca/COD/codd project/final/codd project/src/registers/register_bank.vhd:70]
-INFO: [Synth 8-3491] module 'register_4bit' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/registers/register_4bit.vhd:34' bound to instance 'REG4' of component 'register_4bit' [C:/Drive/Aca/COD/codd project/final/codd project/src/registers/register_bank.vhd:71]
-INFO: [Synth 8-3491] module 'register_4bit' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/registers/register_4bit.vhd:34' bound to instance 'REG5' of component 'register_4bit' [C:/Drive/Aca/COD/codd project/final/codd project/src/registers/register_bank.vhd:72]
-INFO: [Synth 8-3491] module 'register_4bit' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/registers/register_4bit.vhd:34' bound to instance 'REG6' of component 'register_4bit' [C:/Drive/Aca/COD/codd project/final/codd project/src/registers/register_bank.vhd:73]
-INFO: [Synth 8-3491] module 'register_4bit' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/registers/register_4bit.vhd:34' bound to instance 'REG7' of component 'register_4bit' [C:/Drive/Aca/COD/codd project/final/codd project/src/registers/register_bank.vhd:74]
-INFO: [Synth 8-256] done synthesizing module 'register_bank' (10#1) [C:/Drive/Aca/COD/codd project/final/codd project/src/registers/register_bank.vhd:45]
-INFO: [Synth 8-3491] module 'mux8_4bit' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/mux/mux8_4bit.vhd:34' bound to instance 'u_muxA' of component 'mux8_4bit' [C:/Drive/Aca/COD/codd project/final/codd project/src/top/Nanoprocessor.vhd:212]
-INFO: [Synth 8-638] synthesizing module 'mux8_4bit' [C:/Drive/Aca/COD/codd project/final/codd project/src/mux/mux8_4bit.vhd:42]
-INFO: [Synth 8-226] default block is never used [C:/Drive/Aca/COD/codd project/final/codd project/src/mux/mux8_4bit.vhd:47]
-INFO: [Synth 8-256] done synthesizing module 'mux8_4bit' (11#1) [C:/Drive/Aca/COD/codd project/final/codd project/src/mux/mux8_4bit.vhd:42]
-INFO: [Synth 8-3491] module 'mux8_4bit' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/mux/mux8_4bit.vhd:34' bound to instance 'u_muxB' of component 'mux8_4bit' [C:/Drive/Aca/COD/codd project/final/codd project/src/top/Nanoprocessor.vhd:221]
-INFO: [Synth 8-3491] module 'ADD_SUB_4bit' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/alu/ADD_SUB_4bit.vhd:34' bound to instance 'u_alu' of component 'ADD_SUB_4bit' [C:/Drive/Aca/COD/codd project/final/codd project/src/top/Nanoprocessor.vhd:230]
-INFO: [Synth 8-638] synthesizing module 'ADD_SUB_4bit' [C:/Drive/Aca/COD/codd project/final/codd project/src/alu/ADD_SUB_4bit.vhd:44]
-INFO: [Synth 8-3491] module 'RCA_4bit' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/alu/RCA_4bit.vhd:34' bound to instance 'U1' of component 'RCA_4bit' [C:/Drive/Aca/COD/codd project/final/codd project/src/alu/ADD_SUB_4bit.vhd:62]
-INFO: [Synth 8-638] synthesizing module 'RCA_4bit' [C:/Drive/Aca/COD/codd project/final/codd project/src/alu/RCA_4bit.vhd:42]
-INFO: [Synth 8-3491] module 'FA' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/alu/FA.vhd:34' bound to instance 'FA_0' of component 'FA' [C:/Drive/Aca/COD/codd project/final/codd project/src/alu/RCA_4bit.vhd:57]
-INFO: [Synth 8-638] synthesizing module 'FA' [C:/Drive/Aca/COD/codd project/final/codd project/src/alu/FA.vhd:42]
-INFO: [Synth 8-3491] module 'HA' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/alu/HA.vhd:34' bound to instance 'HA_0' of component 'HA' [C:/Drive/Aca/COD/codd project/final/codd project/src/alu/FA.vhd:53]
-INFO: [Synth 8-638] synthesizing module 'HA' [C:/Drive/Aca/COD/codd project/final/codd project/src/alu/HA.vhd:41]
-INFO: [Synth 8-256] done synthesizing module 'HA' (12#1) [C:/Drive/Aca/COD/codd project/final/codd project/src/alu/HA.vhd:41]
-INFO: [Synth 8-3491] module 'HA' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/alu/HA.vhd:34' bound to instance 'HA_1' of component 'HA' [C:/Drive/Aca/COD/codd project/final/codd project/src/alu/FA.vhd:59]
-INFO: [Synth 8-256] done synthesizing module 'FA' (13#1) [C:/Drive/Aca/COD/codd project/final/codd project/src/alu/FA.vhd:42]
-INFO: [Synth 8-3491] module 'FA' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/alu/FA.vhd:34' bound to instance 'FA_1' of component 'FA' [C:/Drive/Aca/COD/codd project/final/codd project/src/alu/RCA_4bit.vhd:58]
-INFO: [Synth 8-3491] module 'FA' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/alu/FA.vhd:34' bound to instance 'FA_2' of component 'FA' [C:/Drive/Aca/COD/codd project/final/codd project/src/alu/RCA_4bit.vhd:59]
-INFO: [Synth 8-3491] module 'FA' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/alu/FA.vhd:34' bound to instance 'FA_3' of component 'FA' [C:/Drive/Aca/COD/codd project/final/codd project/src/alu/RCA_4bit.vhd:60]
-INFO: [Synth 8-256] done synthesizing module 'RCA_4bit' (14#1) [C:/Drive/Aca/COD/codd project/final/codd project/src/alu/RCA_4bit.vhd:42]
-INFO: [Synth 8-256] done synthesizing module 'ADD_SUB_4bit' (15#1) [C:/Drive/Aca/COD/codd project/final/codd project/src/alu/ADD_SUB_4bit.vhd:44]
-INFO: [Synth 8-3491] module 'mux2_4bit' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/mux/mux2_4bit.vhd:34' bound to instance 'u_wb_mux' of component 'mux2_4bit' [C:/Drive/Aca/COD/codd project/final/codd project/src/top/Nanoprocessor.vhd:242]
-INFO: [Synth 8-638] synthesizing module 'mux2_4bit' [C:/Drive/Aca/COD/codd project/final/codd project/src/mux/mux2_4bit.vhd:41]
-INFO: [Synth 8-256] done synthesizing module 'mux2_4bit' (16#1) [C:/Drive/Aca/COD/codd project/final/codd project/src/mux/mux2_4bit.vhd:41]
-INFO: [Synth 8-3491] module 'mux8_4bit' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/mux/mux8_4bit.vhd:34' bound to instance 'u_mux_jzr' of component 'mux8_4bit' [C:/Drive/Aca/COD/codd project/final/codd project/src/top/Nanoprocessor.vhd:251]
-INFO: [Synth 8-256] done synthesizing module 'Nanoprocessor' (17#1) [C:/Drive/Aca/COD/codd project/final/codd project/src/top/Nanoprocessor.vhd:44]
-INFO: [Synth 8-3491] module 'seven_seg' declared at 'C:/Drive/Aca/COD/codd project/final/codd project/src/7seg/7seg.vhd:35' bound to instance 'U_SEG' of component 'seven_seg' [C:/Drive/Aca/COD/codd project/final/codd project/src/7seg/seven_seg_top.vhd:84]
-INFO: [Synth 8-638] synthesizing module 'seven_seg' [C:/Drive/Aca/COD/codd project/final/codd project/src/7seg/7seg.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'seven_seg' (18#1) [C:/Drive/Aca/COD/codd project/final/codd project/src/7seg/7seg.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'system_top' (19#1) [C:/Drive/Aca/COD/codd project/final/codd project/src/7seg/seven_seg_top.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'system_top' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/7seg/seven_seg_top.vhd:45]
+INFO: [Synth 8-3491] module 'Nanoprocessor' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/top/Nanoprocessor.vhd:35' bound to instance 'U_CPU' of component 'Nanoprocessor' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/7seg/seven_seg_top.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'Nanoprocessor' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/top/Nanoprocessor.vhd:45]
+INFO: [Synth 8-3491] module 'slow_clock' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/slow_clock/slow_clock.vhd:35' bound to instance 'slow_clk' of component 'slow_clock' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/top/Nanoprocessor.vhd:173]
+INFO: [Synth 8-638] synthesizing module 'slow_clock' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/slow_clock/slow_clock.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'slow_clock' (1#1) [C:/Drive/Aca/COD/codd project/final_project/final_project/src/slow_clock/slow_clock.vhd:40]
+INFO: [Synth 8-3491] module 'program_rom' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/rom/program_rom.vhd:35' bound to instance 'u_rom' of component 'program_rom' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/top/Nanoprocessor.vhd:179]
+INFO: [Synth 8-638] synthesizing module 'program_rom' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/rom/program_rom.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'program_rom' (2#1) [C:/Drive/Aca/COD/codd project/final_project/final_project/src/rom/program_rom.vhd:40]
+INFO: [Synth 8-3491] module 'instruction_decoder' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/instruction_decoder/instruction_decoder.vhd:34' bound to instance 'u_decoder' of component 'instruction_decoder' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/top/Nanoprocessor.vhd:186]
+INFO: [Synth 8-638] synthesizing module 'instruction_decoder' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/instruction_decoder/instruction_decoder.vhd:46]
+INFO: [Synth 8-226] default block is never used [C:/Drive/Aca/COD/codd project/final_project/final_project/src/instruction_decoder/instruction_decoder.vhd:63]
+INFO: [Synth 8-256] done synthesizing module 'instruction_decoder' (3#1) [C:/Drive/Aca/COD/codd project/final_project/final_project/src/instruction_decoder/instruction_decoder.vhd:46]
+INFO: [Synth 8-3491] module 'pc' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/pc/pc.vhd:34' bound to instance 'u_pc' of component 'pc' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/top/Nanoprocessor.vhd:200]
+INFO: [Synth 8-638] synthesizing module 'pc' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/pc/pc.vhd:43]
+INFO: [Synth 8-3491] module 'pc_register' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/pc/pc_register.vhd:34' bound to instance 'U1' of component 'pc_register' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/pc/pc.vhd:77]
+INFO: [Synth 8-638] synthesizing module 'pc_register' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/pc/pc_register.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'pc_register' (4#1) [C:/Drive/Aca/COD/codd project/final_project/final_project/src/pc/pc_register.vhd:42]
+INFO: [Synth 8-3491] module 'Adder_3bit' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/pc/Adder_3bit.vhd:35' bound to instance 'U2' of component 'adder_3bit' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/pc/pc.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'Adder_3bit' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/pc/Adder_3bit.vhd:40]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/HA.vhd:34' bound to instance 'Bit0' of component 'HA' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/pc/Adder_3bit.vhd:53]
+INFO: [Synth 8-638] synthesizing module 'HA' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/HA.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'HA' (5#1) [C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/HA.vhd:41]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/HA.vhd:34' bound to instance 'Bit1' of component 'HA' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/pc/Adder_3bit.vhd:54]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/HA.vhd:34' bound to instance 'Bit2' of component 'HA' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/pc/Adder_3bit.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'Adder_3bit' (6#1) [C:/Drive/Aca/COD/codd project/final_project/final_project/src/pc/Adder_3bit.vhd:40]
+INFO: [Synth 8-3491] module 'MUX2_3bit' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/mux/MUX2_3bit.vhd:34' bound to instance 'U3' of component 'mux2_3bit' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/pc/pc.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'MUX2_3bit' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/mux/MUX2_3bit.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'MUX2_3bit' (7#1) [C:/Drive/Aca/COD/codd project/final_project/final_project/src/mux/MUX2_3bit.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'pc' (8#1) [C:/Drive/Aca/COD/codd project/final_project/final_project/src/pc/pc.vhd:43]
+INFO: [Synth 8-3491] module 'flags' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/flags.vhd:34' bound to instance 'u_flags' of component 'flags' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/top/Nanoprocessor.vhd:211]
+INFO: [Synth 8-638] synthesizing module 'flags' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/flags.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'flags' (9#1) [C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/flags.vhd:48]
+INFO: [Synth 8-3491] module 'register_bank' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/register_bank.vhd:35' bound to instance 'u_regbank' of component 'register_bank' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/top/Nanoprocessor.vhd:224]
+INFO: [Synth 8-638] synthesizing module 'register_bank' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/register_bank.vhd:45]
+INFO: [Synth 8-3491] module 'decoder_3_to_8' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/decoder/decoder_3_to_8.vhd:34' bound to instance 'DEC' of component 'decoder_3_to_8' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/register_bank.vhd:64]
+INFO: [Synth 8-638] synthesizing module 'decoder_3_to_8' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/decoder/decoder_3_to_8.vhd:40]
+INFO: [Synth 8-226] default block is never used [C:/Drive/Aca/COD/codd project/final_project/final_project/src/decoder/decoder_3_to_8.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'decoder_3_to_8' (10#1) [C:/Drive/Aca/COD/codd project/final_project/final_project/src/decoder/decoder_3_to_8.vhd:40]
+INFO: [Synth 8-3491] module 'register_4bit' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/register_4bit.vhd:34' bound to instance 'REG0' of component 'register_4bit' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/register_bank.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'register_4bit' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/register_4bit.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'register_4bit' (11#1) [C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/register_4bit.vhd:43]
+INFO: [Synth 8-3491] module 'register_4bit' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/register_4bit.vhd:34' bound to instance 'REG1' of component 'register_4bit' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/register_bank.vhd:68]
+INFO: [Synth 8-3491] module 'register_4bit' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/register_4bit.vhd:34' bound to instance 'REG2' of component 'register_4bit' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/register_bank.vhd:69]
+INFO: [Synth 8-3491] module 'register_4bit' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/register_4bit.vhd:34' bound to instance 'REG3' of component 'register_4bit' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/register_bank.vhd:70]
+INFO: [Synth 8-3491] module 'register_4bit' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/register_4bit.vhd:34' bound to instance 'REG4' of component 'register_4bit' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/register_bank.vhd:71]
+INFO: [Synth 8-3491] module 'register_4bit' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/register_4bit.vhd:34' bound to instance 'REG5' of component 'register_4bit' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/register_bank.vhd:72]
+INFO: [Synth 8-3491] module 'register_4bit' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/register_4bit.vhd:34' bound to instance 'REG6' of component 'register_4bit' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/register_bank.vhd:73]
+INFO: [Synth 8-3491] module 'register_4bit' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/register_4bit.vhd:34' bound to instance 'REG7' of component 'register_4bit' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/register_bank.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'register_bank' (12#1) [C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/register_bank.vhd:45]
+INFO: [Synth 8-3491] module 'mux8_4bit' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/mux/mux8_4bit.vhd:34' bound to instance 'u_muxA' of component 'mux8_4bit' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/top/Nanoprocessor.vhd:243]
+INFO: [Synth 8-638] synthesizing module 'mux8_4bit' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/mux/mux8_4bit.vhd:42]
+INFO: [Synth 8-226] default block is never used [C:/Drive/Aca/COD/codd project/final_project/final_project/src/mux/mux8_4bit.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'mux8_4bit' (13#1) [C:/Drive/Aca/COD/codd project/final_project/final_project/src/mux/mux8_4bit.vhd:42]
+INFO: [Synth 8-3491] module 'mux8_4bit' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/mux/mux8_4bit.vhd:34' bound to instance 'u_muxB' of component 'mux8_4bit' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/top/Nanoprocessor.vhd:252]
+INFO: [Synth 8-3491] module 'ADD_SUB_4bit' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/ADD_SUB_4bit.vhd:34' bound to instance 'u_alu' of component 'ADD_SUB_4bit' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/top/Nanoprocessor.vhd:261]
+INFO: [Synth 8-638] synthesizing module 'ADD_SUB_4bit' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/ADD_SUB_4bit.vhd:44]
+INFO: [Synth 8-3491] module 'RCA_4bit' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/RCA_4bit.vhd:34' bound to instance 'U1' of component 'RCA_4bit' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/ADD_SUB_4bit.vhd:62]
+INFO: [Synth 8-638] synthesizing module 'RCA_4bit' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/RCA_4bit.vhd:42]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/FA.vhd:34' bound to instance 'FA_0' of component 'FA' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/RCA_4bit.vhd:57]
+INFO: [Synth 8-638] synthesizing module 'FA' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/FA.vhd:42]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/HA.vhd:34' bound to instance 'HA_0' of component 'HA' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/FA.vhd:53]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/HA.vhd:34' bound to instance 'HA_1' of component 'HA' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/FA.vhd:59]
+INFO: [Synth 8-256] done synthesizing module 'FA' (14#1) [C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/FA.vhd:42]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/FA.vhd:34' bound to instance 'FA_1' of component 'FA' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/RCA_4bit.vhd:58]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/FA.vhd:34' bound to instance 'FA_2' of component 'FA' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/RCA_4bit.vhd:59]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/FA.vhd:34' bound to instance 'FA_3' of component 'FA' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/RCA_4bit.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'RCA_4bit' (15#1) [C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/RCA_4bit.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'ADD_SUB_4bit' (16#1) [C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/ADD_SUB_4bit.vhd:44]
+INFO: [Synth 8-3491] module 'mux2_4bit' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/mux/mux2_4bit.vhd:34' bound to instance 'u_wb_mux' of component 'mux2_4bit' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/top/Nanoprocessor.vhd:273]
+INFO: [Synth 8-638] synthesizing module 'mux2_4bit' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/mux/mux2_4bit.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'mux2_4bit' (17#1) [C:/Drive/Aca/COD/codd project/final_project/final_project/src/mux/mux2_4bit.vhd:41]
+INFO: [Synth 8-3491] module 'mux8_4bit' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/mux/mux8_4bit.vhd:34' bound to instance 'u_mux_jzr' of component 'mux8_4bit' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/top/Nanoprocessor.vhd:282]
+INFO: [Synth 8-256] done synthesizing module 'Nanoprocessor' (18#1) [C:/Drive/Aca/COD/codd project/final_project/final_project/src/top/Nanoprocessor.vhd:45]
+INFO: [Synth 8-3491] module 'seven_seg' declared at 'C:/Drive/Aca/COD/codd project/final_project/final_project/src/7seg/7seg.vhd:35' bound to instance 'U_SEG' of component 'seven_seg' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/7seg/seven_seg_top.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'seven_seg' [C:/Drive/Aca/COD/codd project/final_project/final_project/src/7seg/7seg.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'seven_seg' (19#1) [C:/Drive/Aca/COD/codd project/final_project/final_project/src/7seg/7seg.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'system_top' (20#1) [C:/Drive/Aca/COD/codd project/final_project/final_project/src/7seg/seven_seg_top.vhd:45]
 WARNING: [Synth 8-3331] design instruction_decoder has unconnected port instruction[3]
 WARNING: [Synth 8-3331] design instruction_decoder has unconnected port instruction[2]
 WARNING: [Synth 8-3331] design instruction_decoder has unconnected port instruction[1]
 WARNING: [Synth 8-3331] design instruction_decoder has unconnected port instruction[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 466.246 ; gain = 153.594
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 466.531 ; gain = 152.758
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -108,48 +114,47 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 466.246 ; gain = 153.594
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 466.531 ; gain = 152.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 466.246 ; gain = 153.594
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 466.531 ; gain = 152.758
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Drive/Aca/COD/codd project/final/codd project/constrains/Nanoprocessor.xdc]
-Finished Parsing XDC File [C:/Drive/Aca/COD/codd project/final/codd project/constrains/Nanoprocessor.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Drive/Aca/COD/codd project/final/codd project/constrains/Nanoprocessor.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_top_propImpl.xdc].
+Parsing XDC File [C:/Drive/Aca/COD/codd project/final_project/final_project/constrains/Nanoprocessor.xdc]
+Finished Parsing XDC File [C:/Drive/Aca/COD/codd project/final_project/final_project/constrains/Nanoprocessor.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Drive/Aca/COD/codd project/final_project/final_project/constrains/Nanoprocessor.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/system_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 796.160 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 796.133 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 796.160 ; gain = 483.508
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 796.133 ; gain = 482.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 796.160 ; gain = 483.508
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 796.133 ; gain = 482.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 796.160 ; gain = 483.508
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 796.133 ; gain = 482.359
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "clk_status" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "enable" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
 INFO: [Synth 8-5544] ROM "zero" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "zero_flag" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "jzr_zero" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 796.160 ; gain = 483.508
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 796.133 ; gain = 482.359
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -162,19 +167,18 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 1     
+	   2 Input     26 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 1     
 +---XORs : 
 	   2 Input      4 Bit         XORs := 1     
-	   2 Input      1 Bit         XORs := 10    
+	   2 Input      1 Bit         XORs := 13    
 +---Registers : 
-	               32 Bit    Registers := 1     
+	               26 Bit    Registers := 1     
 	                4 Bit    Registers := 8     
 	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     26 Bit        Muxes := 1     
 	   8 Input     12 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 1     
 	   8 Input      8 Bit        Muxes := 1     
@@ -200,12 +204,12 @@ Detailed RTL Component Info :
 Module slow_clock 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 1     
+	   2 Input     26 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 1     
+	               26 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     26 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
 Module program_rom 
 Detailed RTL Component Info : 
@@ -220,14 +224,18 @@ Module pc_register
 Detailed RTL Component Info : 
 +---Registers : 
 	                3 Bit    Registers := 1     
-Module Adder_3bit 
+Module HA 
 Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
 Module MUX2_3bit 
 Detailed RTL Component Info : 
 +---Muxes : 
 	   2 Input      3 Bit        Muxes := 1     
+Module flags 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
 Module decoder_3_to_8 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -237,10 +245,6 @@ Module register_4bit
 Detailed RTL Component Info : 
 +---Registers : 
 	                4 Bit    Registers := 1     
-Module HA 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
 Module ADD_SUB_4bit 
 Detailed RTL Component Info : 
 +---XORs : 
@@ -280,28 +284,27 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5544] ROM "zero_flag" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "jzr_zero" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "U_CPU/u_regbank/DEC/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5545] ROM "U_CPU/u_slow_clk/count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "U_CPU/u_slow_clk/clk_status" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "U_CPU/slow_clk/enable" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
 WARNING: [Synth 8-3917] design system_top has port an[3] driven by constant 1
 WARNING: [Synth 8-3917] design system_top has port an[2] driven by constant 1
-INFO: [Synth 8-3886] merging instance 'U_CPU/u_regbank/REG5/reg_reg[0]' (FDCE) to 'U_CPU/u_regbank/REG3/reg_reg[0]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U_CPU/u_regbank/REG4/reg_reg[0] )
-INFO: [Synth 8-3886] merging instance 'U_CPU/u_regbank/REG5/reg_reg[1]' (FDCE) to 'U_CPU/u_regbank/REG3/reg_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U_CPU/u_regbank/REG4/reg_reg[1] )
-INFO: [Synth 8-3886] merging instance 'U_CPU/u_regbank/REG5/reg_reg[2]' (FDCE) to 'U_CPU/u_regbank/REG3/reg_reg[2]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U_CPU/u_regbank/REG4/reg_reg[2] )
-INFO: [Synth 8-3886] merging instance 'U_CPU/u_regbank/REG5/reg_reg[3]' (FDCE) to 'U_CPU/u_regbank/REG3/reg_reg[3]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U_CPU/u_regbank/REG4/reg_reg[3] )
 WARNING: [Synth 8-3332] Sequential element (U_CPU/u_regbank/REG4/reg_reg[3]) is unused and will be removed from module system_top.
 WARNING: [Synth 8-3332] Sequential element (U_CPU/u_regbank/REG4/reg_reg[2]) is unused and will be removed from module system_top.
 WARNING: [Synth 8-3332] Sequential element (U_CPU/u_regbank/REG4/reg_reg[1]) is unused and will be removed from module system_top.
 WARNING: [Synth 8-3332] Sequential element (U_CPU/u_regbank/REG4/reg_reg[0]) is unused and will be removed from module system_top.
+INFO: [Synth 8-3886] merging instance 'U_CPU/u_regbank/REG5/reg_reg[0]' (FDCE) to 'U_CPU/u_regbank/REG3/reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U_CPU/u_regbank/REG5/reg_reg[1]' (FDCE) to 'U_CPU/u_regbank/REG3/reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U_CPU/u_regbank/REG5/reg_reg[2]' (FDCE) to 'U_CPU/u_regbank/REG3/reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U_CPU/u_regbank/REG5/reg_reg[3]' (FDCE) to 'U_CPU/u_regbank/REG3/reg_reg[3]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U_CPU/u_regbank/REG0/reg_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U_CPU/u_regbank/REG0/reg_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U_CPU/u_regbank/REG0/reg_reg[3] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U_CPU/u_regbank/REG0/reg_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U_CPU/u_regbank/REG0/reg_reg[3] )
 WARNING: [Synth 8-3332] Sequential element (U_CPU/u_regbank/REG0/reg_reg[3]) is unused and will be removed from module system_top.
 WARNING: [Synth 8-3332] Sequential element (U_CPU/u_regbank/REG0/reg_reg[2]) is unused and will be removed from module system_top.
 WARNING: [Synth 8-3332] Sequential element (U_CPU/u_regbank/REG0/reg_reg[1]) is unused and will be removed from module system_top.
@@ -319,7 +322,7 @@ WARNING: [Synth 8-3332] Sequential element (U_CPU/u_regbank/REG3/reg_reg[1]) is 
 WARNING: [Synth 8-3332] Sequential element (U_CPU/u_regbank/REG3/reg_reg[2]) is unused and will be removed from module system_top.
 WARNING: [Synth 8-3332] Sequential element (U_CPU/u_regbank/REG3/reg_reg[3]) is unused and will be removed from module system_top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 796.160 ; gain = 483.508
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 796.133 ; gain = 482.359
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -331,13 +334,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 796.160 ; gain = 483.508
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 796.133 ; gain = 482.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 811.375 ; gain = 498.723
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 811.512 ; gain = 497.738
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -349,7 +352,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 812.160 ; gain = 499.508
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 812.328 ; gain = 498.555
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -373,7 +376,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 812.160 ; gain = 499.508
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:42 . Memory (MB): peak = 812.328 ; gain = 498.555
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -386,7 +389,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 812.160 ; gain = 499.508
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:42 . Memory (MB): peak = 812.328 ; gain = 498.555
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -398,25 +401,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 812.160 ; gain = 499.508
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:42 . Memory (MB): peak = 812.328 ; gain = 498.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 812.160 ; gain = 499.508
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:42 . Memory (MB): peak = 812.328 ; gain = 498.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 812.160 ; gain = 499.508
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:42 . Memory (MB): peak = 812.328 ; gain = 498.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 812.160 ; gain = 499.508
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:42 . Memory (MB): peak = 812.328 ; gain = 498.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -433,40 +436,41 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |    13|
+|2     |CARRY4 |    12|
 |3     |LUT1   |     4|
 |4     |LUT2   |     2|
-|5     |LUT3   |     4|
+|5     |LUT3   |     2|
 |6     |LUT4   |     9|
-|7     |LUT5   |    13|
-|8     |LUT6   |     5|
-|9     |FDCE   |    11|
-|10    |FDRE   |    50|
+|7     |LUT5   |    11|
+|8     |LUT6   |     8|
+|9     |FDCE   |    13|
+|10    |FDRE   |    44|
 |11    |IBUF   |     2|
 |12    |OBUF   |    17|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+---------------+----------------+------+
-|      |Instance       |Module          |Cells |
-+------+---------------+----------------+------+
-|1     |top            |                |   131|
-|2     |  U_CPU        |Nanoprocessor   |    87|
-|3     |    u_pc       |pc              |    10|
-|4     |      U1       |pc_register     |    10|
-|5     |    u_regbank  |register_bank   |    25|
-|6     |      REG1     |register_4bit   |     5|
-|7     |      REG7     |register_4bit_0 |    20|
-|8     |    u_slow_clk |slow_clock      |    52|
-+------+---------------+----------------+------+
++------+--------------+----------------+------+
+|      |Instance      |Module          |Cells |
++------+--------------+----------------+------+
+|1     |top           |                |   125|
+|2     |  U_CPU       |Nanoprocessor   |    81|
+|3     |    slow_clk  |slow_clock      |    43|
+|4     |    u_flags   |flags           |     2|
+|5     |    u_pc      |pc              |    14|
+|6     |      U1      |pc_register     |    14|
+|7     |    u_regbank |register_bank   |    22|
+|8     |      REG1    |register_4bit   |     5|
+|9     |      REG7    |register_4bit_0 |    17|
++------+--------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 812.160 ; gain = 499.508
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:42 . Memory (MB): peak = 812.328 ; gain = 498.555
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 22 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 812.160 ; gain = 169.594
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 812.160 ; gain = 499.508
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:33 . Memory (MB): peak = 812.328 ; gain = 168.953
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 812.328 ; gain = 498.555
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -474,10 +478,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-104 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
+108 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 812.160 ; gain = 512.035
-INFO: [Common 17-1381] The checkpoint 'C:/Drive/Aca/COD/codd project/final/codd project/Nanoprocessor/Nanoprocessor.runs/synth_1/system_top.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 812.328 ; gain = 511.305
+INFO: [Common 17-1381] The checkpoint 'C:/Drive/Aca/COD/codd project/final_project/final_project/Nanoprocessor/Nanoprocessor.runs/synth_1/system_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file system_top_utilization_synth.rpt -pb system_top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 812.160 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 30 15:26:14 2026...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 812.328 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri May  8 19:18:05 2026...

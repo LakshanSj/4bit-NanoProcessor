@@ -74,20 +74,24 @@ begin
 
     stim_proc: process
     begin
-        reset <= '1'; enable <= '0'; we <= '0'; D <= "1111"; wait for 25 ns;
+    --index no : 240312A - 111 010 101 010 111 000 
+                       --  0011 1010 1010 1011 1000 
+                       
+        reset <= '1'; enable <= '0'; we <= '0'; D <= "1000"; wait for 25 ns;
         reset <= '0'; wait for 10 ns;
 
-        enable <= '1'; we <= '1'; D <= "0101"; wait for 20 ns;
+        enable <= '1'; we <= '1'; D <= "1011"; wait for 20 ns;
         we <= '0'; D <= "1010"; wait for 20 ns;
         we <= '1'; D <= "0011"; wait for 20 ns;
-        enable <= '0'; we <= '1'; D <= "1100"; wait for 20 ns;
+        enable <= '0'; we <= '1'; D <= "1000"; wait for 20 ns;
 
         reset <= '1'; wait for 15 ns;
         reset <= '0'; wait for 15 ns;
 
-        enable <= '1'; we <= '1'; D <= "1001"; wait for 20 ns;
+        enable <= '1'; we <= '1'; D <= "1010"; wait for 20 ns;
 
         wait;
     end process;
 
 end Behavioral;
+

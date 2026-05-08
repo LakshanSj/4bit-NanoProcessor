@@ -21,6 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -76,9 +77,22 @@ architecture Behavioral of Nanoprocessor is
         );
     end component;
     
+    component flags
+         Port (
+           clk      : in  STD_LOGIC;
+           enable   : in STD_LOGIC;
+           reset    : in  STD_LOGIC;
+           flag_en       : in  STD_LOGIC;
+           alu_zero : in  STD_LOGIC;
+           alu_overflow : in STD_LOGIC;
+           Z        : out STD_LOGIC;
+           V        : out STD_LOGIC
+       );
+   end component;
+    
     component register_bank 
         port(
-            clk, reset  : in std_logic;
+            clk, reset , enable : in std_logic;
             write_en    : in std_logic;
             write_sel   : in std_logic_vector(2 downto 0);
             write_data  : in std_logic_vector(3 downto 0);
@@ -103,23 +117,23 @@ architecture Behavioral of Nanoprocessor is
         );
     end component;
     
+    component slow_clock
+        port ( clk_in : in std_logic;
+               enable : out std_logic );
+    end component;
+    
     component pc 
         Port ( 
             clk       : in STD_LOGIC;
+            enable    : in STD_LOGIC;
             reset     : in STD_LOGIC;
             pc_load   : in STD_LOGIC;
             jump_addr : in STD_LOGIC_VECTOR (2 downto 0);
             pc_out    : out STD_LOGIC_VECTOR (2 downto 0)
         );
     end component;  
-    
-    component slow_clock
-        Port ( clk_in  : in STD_LOGIC;
-               clk_out : out STD_LOGIC);
-    end component;
 
     -- internal signals
-    signal slow_clk       : STD_LOGIC;
     signal pc_addr        : STD_LOGIC_VECTOR(2 downto 0);
     signal instruction    : STD_LOGIC_VECTOR(11 downto 0);
     signal jump_addr      : STD_LOGIC_VECTOR(2 downto 0);
@@ -143,22 +157,24 @@ architecture Behavioral of Nanoprocessor is
     signal wb_sel_imm     : STD_LOGIC;
     signal pc_load        : STD_LOGIC;
 
-    signal zero_flag      : STD_LOGIC;
+    signal Z_flag      : STD_LOGIC;
+    signal V_flag      : STD_LOGIC;
+    signal flag_en     : STD_LOGIC;
     signal jzr_reg_value  : STD_LOGIC_VECTOR(3 downto 0);
+    signal jzr_zero    : STD_LOGIC;
+
+    signal enable  : std_logic := '0';
 
 begin
-
     -- immediate and jump address extraction
     imm_val   <= instruction(3 downto 0);
     jump_addr <= instruction(2 downto 0);
 
-    --  Slow clock instantiation
-    u_slow_clk: slow_clock
+    slow_clk : slow_clock
         port map (
-            clk_in  => Clk_100MHz,
-            clk_out => slow_clk
-        );
-
+            clk_in => Clk_100MHz,
+            enable => enable );
+    
     -- Program ROM
     u_rom: program_rom
         port map (
@@ -170,7 +186,7 @@ begin
     u_decoder: instruction_decoder
         port map (
             instruction    => instruction,
-            zero_flag      => zero_flag,
+            zero_flag      => jzr_zero,
             reg_write_en   => reg_write_en,
             reg_write_sel  => reg_write_sel,
             read_sel_a     => read_sel_a,
@@ -183,17 +199,32 @@ begin
     -- Program Counter
     u_pc: pc
         port map (
-            clk       => slow_clk,
+            clk       => Clk_100MHz,
+            enable    => enable,
             reset     => reset,
             pc_load   => pc_load,
             jump_addr => jump_addr,
             pc_out    => pc_addr
         );
+        
+    -- flags
+    u_flags : flags
+        port map (
+            clk      => Clk_100MHz,
+            enable   => enable,
+            reset    => reset,
+            flag_en       => flag_en,
+            alu_zero => alu_zero,
+            alu_overflow => alu_overflow,
+            Z        => Z_flag,
+            V        => V_flag
+        );
 
     -- Register Bank
     u_regbank: register_bank
         port map (
-            clk        => slow_clk,
+            clk        => Clk_100MHz,
+            enable     => enable,
             reset      => reset,
             write_en   => reg_write_en,
             write_sel  => reg_write_sel,
@@ -234,7 +265,7 @@ begin
             alu_sel  => alu_sub,
             Y        => alu_Y,
             carry    => alu_carry,
-            overflow => overflow,
+            overflow => alu_overflow,
             zero     => alu_zero
         );
 
@@ -255,10 +286,11 @@ begin
             I4  => R4, I5 => R5, I6 => R6, I7 => R7,
             Y   => jzr_reg_value
         );
-    zero_flag <= '1' when jzr_reg_value = "0000" else '0';
-
-    -- Top-level outputs
+    
+    jzr_zero <= '1' when jzr_reg_value = "0000" else '0';
+    flag_en <= reg_write_en and not wb_sel_imm;
     result <= R7;
-    zero   <= alu_zero AND NOT instruction(11);
+    zero   <= Z_flag;
+    overflow <= V_flag;
 
 end Behavioral;

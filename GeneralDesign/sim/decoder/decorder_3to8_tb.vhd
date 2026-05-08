@@ -37,45 +37,47 @@ end decorder_3to8_tb;
 
 architecture Behavioral of decorder_3to8_tb is
 
-component decorder_3to8
-    Port ( sel : in  STD_LOGIC_VECTOR (2 downto 0);
+component decoder_3_to_8
+    Port ( reg_sel : in  STD_LOGIC_VECTOR (2 downto 0);
            en  : in  STD_LOGIC;
-           Y   : out STD_LOGIC_VECTOR (7 downto 0));
+           y   : out STD_LOGIC_VECTOR (7 downto 0));
 end component;
 
-signal sel : STD_LOGIC_VECTOR(2 downto 0) := "000";
+signal reg_sel : STD_LOGIC_VECTOR(2 downto 0) := "000";
 signal en  : STD_LOGIC := '0';
-signal Y   : STD_LOGIC_VECTOR(7 downto 0);
+signal y   : STD_LOGIC_VECTOR(7 downto 0);
 
 begin
 
-uut: decorder_3to8
+uut: decoder_3_to_8
     port map (
-        sel => sel,
+        reg_sel => reg_sel,
         en  => en,
-        Y   => Y
+        y   => y
     );
-
+--index no : 240312A - 111 010 101 010 111 000
 stim_proc: process
 begin
     en  <= '0';
-    sel <= "000"; wait for 10 ns;
-    sel <= "101"; wait for 10 ns;
+    reg_sel <= "000"; wait for 10 ns;
+    reg_sel  <= "111"; wait for 10 ns;
 
     en  <= '1';
-    sel <= "000"; wait for 10 ns;
-    sel <= "001"; wait for 10 ns;
-    sel <= "010"; wait for 10 ns;
-    sel <= "011"; wait for 10 ns;
-    sel <= "100"; wait for 10 ns;
-    sel <= "101"; wait for 10 ns;
-    sel <= "110"; wait for 10 ns;
-    sel <= "111"; wait for 10 ns;
+    reg_sel  <= "000"; wait for 10 ns;
+    reg_sel  <= "111"; wait for 10 ns;
+    reg_sel  <= "010"; wait for 10 ns;
+    reg_sel  <= "101"; wait for 10 ns;
+    
+    reg_sel  <= "001"; wait for 10 ns;   --random
+    reg_sel  <= "011"; wait for 10 ns;   --random
+    reg_sel  <= "100"; wait for 10 ns;   --random
+    reg_sel  <= "110"; wait for 10 ns;   --random
 
     en  <= '0';
-    sel <= "111"; wait for 10 ns;
+    reg_sel  <= "010"; wait for 10 ns;
 
     wait;
 end process;
 
 end Behavioral;
+

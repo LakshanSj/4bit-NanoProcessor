@@ -70,22 +70,26 @@ UUT: ADD_SUB_4bit
 -- Stimulus process
 stim_proc: process
 begin
+--index no : 240288D - 0011 1010 1010 1010 0000 
     -- ========== ADDITION TESTS (alu_sel = '0') ==========
     alu_sel <= '0';
-    A <= "0101"; B <= "0011"; wait for 10 ns;
-    A <= "1100"; B <= "0101"; wait for 10 ns;
-    A <= "0111"; B <= "0001"; wait for 10 ns;
-    A <= "0000"; B <= "0000"; wait for 10 ns;
-    A <= "0111"; B <= "0001"; wait for 10 ns;
+    A <= "0000"; B <= "1010"; wait for 10 ns;
+    A <= "1010"; B <= "1010"; wait for 10 ns;
+    A <= "0011"; B <= "1010"; wait for 10 ns;
+    
+    A <= "0001"; B <= "0101"; wait for 10 ns;   --random
+    A <= "0111"; B <= "0001"; wait for 10 ns;   --random
 
     -- ========== SUBTRACTION TESTS (alu_sel = '1') ==========
     alu_sel <= '1';
-    A <= "1001"; B <= "0100"; wait for 10 ns;
-    A <= "0101"; B <= "0101"; wait for 10 ns;
-    A <= "0010"; B <= "1000"; wait for 10 ns;
-    A <= "1000"; B <= "0001"; wait for 10 ns;
-    A <= "1111"; B <= "1111"; wait for 10 ns;
+    A <= "0000"; B <= "1010"; wait for 10 ns;
+    A <= "1010"; B <= "1010"; wait for 10 ns;
+    A <= "0011"; B <= "1010"; wait for 10 ns;
+    
+    A <= "0001"; B <= "0101"; wait for 10 ns;   --random
+    A <= "1111"; B <= "1011"; wait for 10 ns;   --random
     wait;
 end process;
 
 end Behavioral;
+

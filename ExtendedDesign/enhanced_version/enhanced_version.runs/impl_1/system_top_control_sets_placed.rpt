@@ -1,0 +1,78 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Fri May  8 19:24:05 2026
+| Host         : LAPTOP-B9DFRR1L running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file system_top_control_sets_placed.rpt
+| Design       : system_top
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    12 |
+| Unused register locations in slices containing registers |    40 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            8 |
+|      8 |            2 |
+|    16+ |            2 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              31 |           11 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              29 |           10 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              44 |           17 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------+----------------------------------+---------------------------------------+------------------+----------------+
+|      Clock Signal     |           Enable Signal          |            Set/Reset Signal           | Slice Load Count | Bel Load Count |
++-----------------------+----------------------------------+---------------------------------------+------------------+----------------+
+|  Clk_100MHz_IBUF_BUFG |                                  | U_CPU/u_inst_sel/inst_reg[12]_i_1_n_0 |                3 |              4 |
+|  Clk_100MHz_IBUF_BUFG | U_CPU/u_inst_sel/reg_reg[0][0]   | btnC_IBUF                             |                1 |              4 |
+|  Clk_100MHz_IBUF_BUFG | U_CPU/u_inst_sel/reg_reg[0]_0[0] | btnC_IBUF                             |                1 |              4 |
+|  Clk_100MHz_IBUF_BUFG | U_CPU/u_inst_sel/reg_reg[0]_1[0] | btnC_IBUF                             |                1 |              4 |
+|  Clk_100MHz_IBUF_BUFG | U_CPU/u_inst_sel/reg_reg[0]_2[0] | btnC_IBUF                             |                1 |              4 |
+|  Clk_100MHz_IBUF_BUFG | U_CPU/u_inst_sel/E[0]            | btnC_IBUF                             |                1 |              4 |
+|  Clk_100MHz_IBUF_BUFG | U_CPU/u_inst_sel/reg_reg[0]_3[0] | btnC_IBUF                             |                2 |              4 |
+|  Clk_100MHz_IBUF_BUFG | U_CPU/u_inst_sel/reg_reg[0]_4[0] | btnC_IBUF                             |                3 |              4 |
+|  Clk_100MHz_IBUF_BUFG | U_CPU/u_step/E[0]                | btnC_IBUF                             |                4 |              8 |
+|  Clk_100MHz_IBUF_BUFG | U_CPU/u_inst_sel/reg_reg[0]_5[0] | btnC_IBUF                             |                3 |              8 |
+|  Clk_100MHz_IBUF_BUFG |                                  | U_CPU/slow_clk/count[25]_i_1_n_0      |                7 |             25 |
+|  Clk_100MHz_IBUF_BUFG |                                  |                                       |               11 |             31 |
++-----------------------+----------------------------------+---------------------------------------+------------------+----------------+
+
+

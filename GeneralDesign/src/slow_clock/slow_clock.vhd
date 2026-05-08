@@ -21,6 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -33,22 +34,24 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity slow_clock is
     Port ( clk_in : in STD_LOGIC;
-           clk_out : out STD_LOGIC);
+           enable : out STD_LOGIC);
 end slow_clock;
 
 architecture Behavioral of slow_clock is
-signal count : integer := 1;
-signal clk_status : std_logic :='0';
+signal count : unsigned(25 downto 0) := (others => '0');
 
 begin
-    process (clk_in) begin
-        if (rising_edge(clk_in)) then
+process(clk_in)
+begin
+    if rising_edge(clk_in) then
+        if count = 5 then
+            enable <= '1';
+            count <= (others => '0');
+        else
+            enable <= '0';
             count <= count + 1;
-            if(count = 25000000) then
-                clk_status <= not clk_status;
-                count <= 1;
-            end if;
         end if;
-    end process;
-    clk_out <= clk_status;
+    end if;
+end process;
+
 end Behavioral;

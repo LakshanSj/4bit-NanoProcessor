@@ -33,6 +33,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity pc_register is
     Port ( clk : in STD_LOGIC;
+           enable : in STD_LOGIC;
            reset : in STD_LOGIC;
            D : in STD_LOGIC_VECTOR (2 downto 0);
            Q : out STD_LOGIC_VECTOR (2 downto 0));
@@ -48,7 +49,9 @@ begin
     if reset = '1' then
         reg <= "000";
     elsif rising_edge(clk) then
-        reg <= D;
+        if enable='1' then
+            reg <= D;
+        end if;
     end if;
 end process;
 Q <= reg;

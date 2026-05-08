@@ -79,7 +79,27 @@ begin
         sel <= "101"; wait for 10 ns;
         sel <= "110"; wait for 10 ns;
         sel <= "111"; wait for 10 ns;
+        
+       -- index No 240297 - 111 010 101 010 101 001
+        
+        I0 <= "1110"; I1 <= "1101"; I2 <= "1010"; I3 <= "0101";
+        I4 <= "1010"; I5 <= "1001"; I6 <= "1111"; I7 <= "0001";
+        wait for 10 ns;
+
+        sel <= "111"; wait for 10 ns;
+        sel <= "010"; wait for 10 ns;
+        sel <= "101"; wait for 10 ns;
+        sel <= "001"; wait for 10 ns;
+
+        I0 <= "1001"; I1 <= "1010"; I2 <= "0101"; I3 <= "1110";
+        I4 <= "1111"; I5 <= "0001"; I6 <= "0111"; I7 <= "1101";
+        wait for 10 ns;
+
+        sel <= "000"; wait for 10 ns;
+        sel <= "100"; wait for 10 ns;
+        sel <= "110"; wait for 10 ns;
 
         wait;
     end process;
 end Behavioral;
+

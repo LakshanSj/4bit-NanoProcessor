@@ -1,0 +1,135 @@
+/*
+
+Xilinx Vivado v2018.1 (64-bit) [Major: 2018, Minor: 1]
+SW Build: 2188600 on Wed Apr  4 18:40:38 MDT 2018
+IP Build: 2185939 on Wed Apr  4 20:55:05 MDT 2018
+
+Process ID: 26236
+License: Customer
+
+Current time: 	Fri May 08 19:34:54 IST 2026
+Time zone: 	India Standard Time (Asia/Colombo)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1536x864
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 128 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.1/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.1/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	Lakshan
+User home directory: C:/Users/User
+User working directory: C:/Drive/Aca/COD/codd project/final_project/Nonoprocessor Extended Version/enhanced_version
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.1
+RDI_DATADIR: C:/Xilinx/Vivado/2018.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.1/bin
+
+Vivado preferences file location: C:/Users/User/AppData/Roaming/Xilinx/Vivado/2018.1/vivado.xml
+Vivado preferences directory: C:/Users/User/AppData/Roaming/Xilinx/Vivado/2018.1/
+Vivado layouts directory: C:/Users/User/AppData/Roaming/Xilinx/Vivado/2018.1/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Drive/Aca/COD/codd project/final_project/Nonoprocessor Extended Version/enhanced_version/vivado.log
+Vivado journal file location: 	C:/Drive/Aca/COD/codd project/final_project/Nonoprocessor Extended Version/enhanced_version/vivado.jou
+Engine tmp dir: 	C:/Drive/Aca/COD/codd project/final_project/Nonoprocessor Extended Version/enhanced_version/.Xil/Vivado-26236-LAPTOP-B9DFRR1L
+
+GUI allocated memory:	211 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 543 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 58 MB (+58444kb) [00:00:08]
+// [Engine Memory]: 523 MB (+397441kb) [00:00:08]
+// Opening Vivado Project: C:\Drive\Aca\COD\codd project\final_project\Nonoprocessor Extended Version\enhanced_version\enhanced_version.xpr. Version: Vivado v2018.1 
+// bv (ch):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/Drive/Aca/COD/codd project/final_project/Nonoprocessor Extended Version/enhanced_version/enhanced_version.xpr} 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Drive/Aca/COD/codd project/final_project/Nonoprocessor Extended Version/enhanced_version' 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {C:/Drive/Aca/COD/codd project/final_project/Nonoprocessor Extended Version/enhanced_version/enhanced_version.xpr} 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Drive/Aca/COD/codd project/final_project/Nonoprocessor Extended Version/enhanced_version' INFO: [Project 1-313] Project file moved from 'C:/Drive/Aca/COD/codd project/enhanced_version/enhanced_version' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// HMemoryUtils.trashcanNow. Engine heap size: 584 MB. GUI used memory: 34 MB. Current time: 5/8/26 7:34:56 PM IST
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 641 MB (+95596kb) [00:00:14]
+// Tcl Message: open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 891.824 ; gain = 123.547 
+// Project name: enhanced_version; location: C:/Drive/Aca/COD/codd project/final_project/Nonoprocessor Extended Version/enhanced_version; part: xc7a35tcpg236-1
+// [Engine Memory]: 684 MB (+11520kb) [00:00:18]
+dismissDialog("Open Project"); // bv (ch)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 64 MB (+2702kb) [00:00:20]
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system_top(Behavioral) (seven_seg_top.vhd)]", 1); // B (D, ch)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system_top(Behavioral) (seven_seg_top.vhd)]", 1); // B (D, ch)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U (q, ch)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // Z (ch)
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_PROJECT, "Open..."); // ac (ch)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U (q, ch)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+setFileChooser("C:/Drive/Aca/COD/codd project/final_project/Nanoprocessor Optimized Version/Nanoprocessor/Nanoprocessor.xpr");
+// Opening Vivado Project: C:/Drive/Aca/COD/codd project/final_project/Nanoprocessor Optimized Version/Nanoprocessor/Nanoprocessor.xpr. Version: Vivado v2018.1 
+// bv (ch):  Open Project : addNotify
+selectButton("PAResourceOtoP.PABaseTab_WOULD_YOU_LIKE_TO_CLOSE_CURRENTLY_No", "No"); // JButton (A, G)
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// Tcl Message: open_project {C:/Drive/Aca/COD/codd project/final_project/Nanoprocessor Optimized Version/Nanoprocessor/Nanoprocessor.xpr} 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Drive/Aca/COD/codd project/final_project/Nanoprocessor Optimized Version/Nanoprocessor' 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Drive/Aca/COD/codd project/final_project/final_project/Nanoprocessor' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// [GUI Memory]: 69 MB (+2692kb) [00:00:46]
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 80 MB (+7166kb) [00:00:48]
+// [Engine Memory]: 721 MB (+3365kb) [00:00:48]
+// HMemoryUtils.trashcanNow. Engine heap size: 723 MB. GUI used memory: 50 MB. Current time: 5/8/26 7:35:33 PM IST
+// Tcl Message: open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 931.961 ; gain = 28.809 
+// Project name: Nanoprocessor; location: C:/Drive/Aca/COD/codd project/final_project/Nanoprocessor Optimized Version/Nanoprocessor; part: xc7a35tcpg236-1
+// 'i' command handler elapsed time: 15 seconds
+dismissDialog("Open Project"); // bv (ch)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+closeMainWindow("Nanoprocessor - [C:/Drive/Aca/COD/codd project/final_project/Nanoprocessor Optimized Version/Nanoprocessor/Nanoprocessor.xpr] - Vivado 2018.1"); // ch
+// Run Command: PAResourceCommand.PACommandNames_CLOSE_PROJECT
+// A (ch): Close Project: addNotify
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bv (ch):  Close Project : addNotify
+// TclEventType: PROJECT_CLOSE
+dismissDialog("Close Project"); // A (ch)
+// HMemoryUtils.trashcanNow. Engine heap size: 733 MB. GUI used memory: 47 MB. Current time: 5/8/26 7:35:39 PM IST
+// Tcl Message: close_project 
+dismissDialog("Close Project"); // bv (ch)
+// [GUI Memory]: 85 MB (+866kb) [00:02:45]

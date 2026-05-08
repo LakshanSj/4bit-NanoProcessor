@@ -36,23 +36,32 @@ entity slow_clock_tb is
 end slow_clock_tb;
 
 architecture Behavioral of slow_clock_tb is
-component slow_clock
-    Port ( clk_in : in STD_LOGIC;
-           clk_out : out STD_LOGIC);
-end component;
-signal clk_in, clk_out : std_logic;
+
+    component slow_clock
+        Port ( clk_in : in STD_LOGIC;
+               enable : out STD_LOGIC); 
+    end component;
+
+    -- 2. Signals
+    signal clk_in : std_logic := '0';
+    signal enable_out : std_logic; 
 
 begin
-UUT : slow_clock
-    port map ( clk_in => clk_in,
-               clk_out => clk_out);
-               
-clk_process : process
-begin
-    while true loop
-        clk_in <= '1'; wait for 10ns;
-        clk_in <= '0'; wait for 10 ns;
-    end loop;
-end process;
+
+    UUT : slow_clock
+        port map ( 
+            clk_in => clk_in,
+            enable => enable_out 
+        );
+
+    clk_process : process
+    begin
+        clk_in <= '0';
+        wait for 10 ns;
+        clk_in <= '1';
+        wait for 10 ns;
+    end process;
 
 end Behavioral;
+
+

@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Fri May  8 19:34:31 2026
+# Process ID: 26236
+# Current directory: C:/Drive/Aca/COD/codd project/final_project/Nonoprocessor Extended Version/enhanced_version
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3040 C:\Drive\Aca\COD\codd project\final_project\Nonoprocessor Extended Version\enhanced_version\enhanced_version.xpr
+# Log file: C:/Drive/Aca/COD/codd project/final_project/Nonoprocessor Extended Version/enhanced_version/vivado.log
+# Journal file: C:/Drive/Aca/COD/codd project/final_project/Nonoprocessor Extended Version/enhanced_version\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Drive/Aca/COD/codd project/final_project/Nonoprocessor Extended Version/enhanced_version/enhanced_version.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Drive/Aca/COD/codd project/final_project/Nonoprocessor Extended Version/enhanced_version'
+INFO: [Project 1-313] Project file moved from 'C:/Drive/Aca/COD/codd project/enhanced_version/enhanced_version' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 891.824 ; gain = 123.547
+update_compile_order -fileset sources_1
+open_project {C:/Drive/Aca/COD/codd project/final_project/Nanoprocessor Optimized Version/Nanoprocessor/Nanoprocessor.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Drive/Aca/COD/codd project/final_project/Nanoprocessor Optimized Version/Nanoprocessor'
+INFO: [Project 1-313] Project file moved from 'C:/Drive/Aca/COD/codd project/final_project/final_project/Nanoprocessor' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 931.961 ; gain = 28.809
+update_compile_order -fileset sources_1
+close_project

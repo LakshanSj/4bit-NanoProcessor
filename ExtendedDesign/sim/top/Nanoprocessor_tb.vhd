@@ -35,7 +35,7 @@ entity Nanoprocessor_tb is
 --  Port ( );
 end Nanoprocessor_tb;
 
- architecture Behavioral of Nanoprocessor_tb is
+architecture Behavioral of Nanoprocessor_tb is
  
  component Nanoprocessor
          Port (
@@ -112,3 +112,4 @@ end Nanoprocessor_tb;
 
 
 end Behavioral;
+

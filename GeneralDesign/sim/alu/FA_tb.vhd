@@ -66,14 +66,19 @@ uut: FA port map (
 
 stim_proc: process
 begin
+ -- index no : 240288 111 010 101 010 100 000
+ --          : 240294 111 010 101 010 100 110
+ --          : 240297 111 010 101 010 101 001
+ --          : 240312 111 010 101 010 111 000
     A <= '0'; B <= '0'; C_in <= '0'; wait for 20 ns;
+    A <= '1'; B <= '1'; C_in <= '0'; wait for 20 ns;
     A <= '0'; B <= '0'; C_in <= '1'; wait for 20 ns;
-    A <= '0'; B <= '1'; C_in <= '0'; wait for 20 ns;
-    A <= '0'; B <= '1'; C_in <= '1'; wait for 20 ns;
+    A <= '1'; B <= '1'; C_in <= '1'; wait for 20 ns;
     A <= '1'; B <= '0'; C_in <= '0'; wait for 20 ns;
     A <= '1'; B <= '0'; C_in <= '1'; wait for 20 ns;
-    A <= '1'; B <= '1'; C_in <= '0'; wait for 20 ns;
-    A <= '1'; B <= '1'; C_in <= '1'; wait for 20 ns;
+    A <= '0'; B <= '1'; C_in <= '0'; wait for 20 ns;
+    A <= '0'; B <= '1'; C_in <= '1'; wait for 20 ns; --random
     wait;
 end process;
 end Behavioral;
+

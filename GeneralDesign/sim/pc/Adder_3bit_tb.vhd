@@ -49,15 +49,18 @@ UUT: Adder_3bit port map (A => A, Y => Y);
 
 stim_proc: process
 begin
-    A <= "000"; wait for 10ns;
-    A <= "001"; wait for 10ns;
-    A <= "010"; wait for 10ns;
-    A <= "011"; wait for 10ns;
-    A <= "100"; wait for 10ns;
-    A <= "101"; wait for 10ns;
-    A <= "110"; wait for 10ns;
-    A <= "111"; wait for 10ns;  
+--- index no :- 240297E - 111 010 101 010 101 001
+    A <= "001"; wait for 100ns;
+    A <= "101"; wait for 100ns;
+    A <= "010"; wait for 100ns;
+    A <= "111"; wait for 100ns;
+ --- random test values   
+    A <= "000"; wait for 100ns;
+    A <= "011"; wait for 100ns;
+    A <= "100"; wait for 100ns;
+    A <= "110"; wait for 100ns; 
     wait;
 end process;
 
 end Behavioral;
+

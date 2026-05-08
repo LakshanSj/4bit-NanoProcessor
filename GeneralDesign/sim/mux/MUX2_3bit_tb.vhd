@@ -65,7 +65,19 @@ begin
     sel <= '1'; A <= "000"; B <= "111"; wait for 10 ns;
     sel <= '0'; A <= "011"; B <= "011"; wait for 10 ns;
     sel <= '1'; A <= "011"; B <= "011"; wait for 10 ns;
+    
+    -- index No 240297 - 111 010 101 010 101 001
+
+    sel <= '0'; A <= "111"; B <= "010"; wait for 10 ns; -- 240288 pattern
+    sel <= '1'; A <= "101"; B <= "010"; wait for 10 ns; -- 240294 pattern
+    sel <= '0'; A <= "101"; B <= "001"; wait for 10 ns; -- 240297 pattern
+    
+
+    -- additional mixed stress cases
+    sel <= '0'; A <= "011"; B <= "100"; wait for 10 ns;
+    sel <= '1'; A <= "001"; B <= "110"; wait for 10 ns;
     wait; 
 end process;
 
 end Behavioral;
+
