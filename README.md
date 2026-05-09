@@ -55,4 +55,4 @@ Refer to each design's individual `README.md` for complete pinout, ISA tables, a
 
 ---
 
-*CO326 Computer Organization & Design — University of Moratuwa.*
+*Computer Organization & Design — University of Moratuwa.*
