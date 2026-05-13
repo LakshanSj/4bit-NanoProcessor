@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:{C:/Drive/Aca/COD/codd project/final_project/final_project/constrains/Nanoprocessor.xdc} rfile:../../../../constrains/Nanoprocessor.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:{C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/constrains/Nanoprocessor.xdc} rfile:../../../../constrains/Nanoprocessor.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W5 [get_ports Clk_100MHz]
 set_property src_info {type:XDC file:1 line:47 export:INPUT save:INPUT read:READ} [current_design]

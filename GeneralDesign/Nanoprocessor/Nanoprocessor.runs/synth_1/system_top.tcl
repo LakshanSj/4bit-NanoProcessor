@@ -16,43 +16,39 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {C:/Drive/Aca/COD/codd project/final_project/final_project/Nanoprocessor/Nanoprocessor.cache/wt} [current_project]
-set_property parent.project_path {C:/Drive/Aca/COD/codd project/final_project/final_project/Nanoprocessor/Nanoprocessor.xpr} [current_project]
+set_property webtalk.parent_dir {C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/Nanoprocessor/Nanoprocessor.cache/wt} [current_project]
+set_property parent.project_path {C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/Nanoprocessor/Nanoprocessor.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
-set_property ip_output_repo {c:/Drive/Aca/COD/codd project/final_project/final_project/Nanoprocessor/Nanoprocessor.cache/ip} [current_project]
+set_property ip_output_repo {c:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/Nanoprocessor/Nanoprocessor.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  {C:/Drive/Aca/COD/codd project/final_project/final_project/src/7seg/7seg.vhd}
-  {C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/ADD_SUB_4bit.vhd}
-  {C:/Drive/Aca/COD/codd project/final_project/final_project/src/pc/Adder_3bit.vhd}
-  {C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/FA.vhd}
-  {C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/HA.vhd}
-  {C:/Drive/Aca/COD/codd project/final_project/final_project/src/mux/MUX2_3bit.vhd}
-  {C:/Drive/Aca/COD/codd project/final_project/final_project/src/top/Nanoprocessor.vhd}
-  {C:/Drive/Aca/COD/codd project/final_project/final_project/src/alu/RCA_4bit.vhd}
-  {C:/Drive/Aca/COD/codd project/final_project/final_project/src/decoder/decoder_3_to_8.vhd}
-  {C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/flags.vhd}
-  {C:/Drive/Aca/COD/codd project/final_project/final_project/src/instruction_decoder/instruction_decoder.vhd}
-  {C:/Drive/Aca/COD/codd project/final_project/final_project/src/mux/mux2_4bit.vhd}
-  {C:/Drive/Aca/COD/codd project/final_project/final_project/src/mux/mux8_4bit.vhd}
-  {C:/Drive/Aca/COD/codd project/final_project/final_project/src/pc/pc.vhd}
-  {C:/Drive/Aca/COD/codd project/final_project/final_project/src/pc/pc_register.vhd}
-  {C:/Drive/Aca/COD/codd project/final_project/final_project/src/rom/program_rom.vhd}
-  {C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/register_4bit.vhd}
-  {C:/Drive/Aca/COD/codd project/final_project/final_project/src/registers/register_bank.vhd}
-  {C:/Drive/Aca/COD/codd project/final_project/final_project/src/slow_clock/slow_clock.vhd}
-  {C:/Drive/Aca/COD/codd project/final_project/final_project/src/7seg/seven_seg_top.vhd}
+  {C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/src/7seg/7seg.vhd}
+  {C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/src/alu/ADD_SUB_4bit.vhd}
+  {C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/src/pc/Adder_3bit.vhd}
+  {C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/src/alu/FA.vhd}
+  {C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/src/alu/HA.vhd}
+  {C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/src/mux/MUX2_3bit.vhd}
+  {C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/src/top/Nanoprocessor.vhd}
+  {C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/src/alu/RCA_4bit.vhd}
+  {C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/src/decoder/decoder_3_to_8.vhd}
+  {C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/src/registers/flags.vhd}
+  {C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/src/instruction_decoder/instruction_decoder.vhd}
+  {C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/src/mux/mux2_4bit.vhd}
+  {C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/src/mux/mux8_4bit.vhd}
+  {C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/src/pc/pc.vhd}
+  {C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/src/pc/pc_register.vhd}
+  {C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/src/rom/program_rom.vhd}
+  {C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/src/registers/register_4bit.vhd}
+  {C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/src/registers/register_bank.vhd}
+  {C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/src/slow_clock/slow_clock.vhd}
+  {C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/src/7seg/seven_seg_top.vhd}
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -62,8 +58,8 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Drive/Aca/COD/codd project/final_project/final_project/constrains/Nanoprocessor.xdc}}
-set_property used_in_implementation false [get_files {{C:/Drive/Aca/COD/codd project/final_project/final_project/constrains/Nanoprocessor.xdc}}]
+read_xdc {{C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/constrains/Nanoprocessor.xdc}}
+set_property used_in_implementation false [get_files {{C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/constrains/Nanoprocessor.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]

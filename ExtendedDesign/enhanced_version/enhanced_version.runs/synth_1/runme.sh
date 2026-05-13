@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Drive/Aca/COD/codd project/enhanced_version/enhanced_version/enhanced_version.runs/synth_1'
+HD_PWD='C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/enhanced_version/enhanced_version.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

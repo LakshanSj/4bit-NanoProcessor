@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Drive/Aca/COD/codd project/final_project/final_project/src/slow_clock/slow_clock.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity slow_clock
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/src/pc/pc_register.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity pc_register

@@ -60,9 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -73,12 +70,12 @@ set rc [catch {
   set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir {C:/Drive/Aca/COD/codd project/enhanced_version/enhanced_version/enhanced_version.cache/wt} [current_project]
-  set_property parent.project_path {C:/Drive/Aca/COD/codd project/enhanced_version/enhanced_version/enhanced_version.xpr} [current_project]
-  set_property ip_output_repo {{C:/Drive/Aca/COD/codd project/enhanced_version/enhanced_version/enhanced_version.cache/ip}} [current_project]
+  set_property webtalk.parent_dir {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/enhanced_version/enhanced_version.cache/wt} [current_project]
+  set_property parent.project_path {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/enhanced_version/enhanced_version.xpr} [current_project]
+  set_property ip_output_repo {{C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/enhanced_version/enhanced_version.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet {{C:/Drive/Aca/COD/codd project/enhanced_version/enhanced_version/enhanced_version.runs/synth_1/system_top.dcp}}
-  read_xdc {{C:/Drive/Aca/COD/codd project/enhanced_version/constrains/Nanoprocessor.xdc}}
+  add_files -quiet {{C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/enhanced_version/enhanced_version.runs/synth_1/system_top.dcp}}
+  read_xdc {{C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/constrains/Nanoprocessor.xdc}}
   link_design -top system_top -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]

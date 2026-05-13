@@ -2,34 +2,41 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Fri May  8 19:34:31 2026
-# Process ID: 26236
-# Current directory: C:/Drive/Aca/COD/codd project/final_project/Nonoprocessor Extended Version/enhanced_version
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3040 C:\Drive\Aca\COD\codd project\final_project\Nonoprocessor Extended Version\enhanced_version\enhanced_version.xpr
-# Log file: C:/Drive/Aca/COD/codd project/final_project/Nonoprocessor Extended Version/enhanced_version/vivado.log
-# Journal file: C:/Drive/Aca/COD/codd project/final_project/Nonoprocessor Extended Version/enhanced_version\vivado.jou
+# Start of session at: Mon May 11 16:33:07 2026
+# Process ID: 28608
+# Current directory: C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/enhanced_version
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4304 C:\Drive\Aca\COD\codd project\Nonoprocessor Extended Version\enhanced_version\enhanced_version.xpr
+# Log file: C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/enhanced_version/vivado.log
+# Journal file: C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/enhanced_version\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Drive/Aca/COD/codd project/final_project/Nonoprocessor Extended Version/enhanced_version/enhanced_version.xpr}
-INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
-Current project path is 'C:/Drive/Aca/COD/codd project/final_project/Nonoprocessor Extended Version/enhanced_version'
-INFO: [Project 1-313] Project file moved from 'C:/Drive/Aca/COD/codd project/enhanced_version/enhanced_version' since last save.
+open_project {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/enhanced_version/enhanced_version.xpr}
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'.
-open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 891.824 ; gain = 123.547
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 929.457 ; gain = 175.152
 update_compile_order -fileset sources_1
-open_project {C:/Drive/Aca/COD/codd project/final_project/Nanoprocessor Optimized Version/Nanoprocessor/Nanoprocessor.xpr}
-INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
-Current project path is 'C:/Drive/Aca/COD/codd project/final_project/Nanoprocessor Optimized Version/Nanoprocessor'
-INFO: [Project 1-313] Project file moved from 'C:/Drive/Aca/COD/codd project/final_project/final_project/Nanoprocessor' since last save.
-Scanning sources...
-Finished scanning sources
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'.
-open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 931.961 ; gain = 28.809
-update_compile_order -fileset sources_1
-close_project
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Mon May 11 16:33:56 2026] Launched impl_1...
+Run output will be captured here: C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/enhanced_version/enhanced_version.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Mon May 11 16:35:21 2026] Launched synth_1...
+Run output will be captured here: C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/enhanced_version/enhanced_version.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+[Mon May 11 16:36:25 2026] Launched impl_1...
+Run output will be captured here: C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/enhanced_version/enhanced_version.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Mon May 11 16:37:57 2026] Launched impl_1...
+Run output will be captured here: C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/enhanced_version/enhanced_version.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Mon May 11 17:56:27 2026] Launched synth_1...
+Run output will be captured here: C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/enhanced_version/enhanced_version.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+[Mon May 11 17:57:39 2026] Launched impl_1...
+Run output will be captured here: C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/enhanced_version/enhanced_version.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon May 11 17:59:13 2026...

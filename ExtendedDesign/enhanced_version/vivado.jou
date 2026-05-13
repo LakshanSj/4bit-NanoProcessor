@@ -2,16 +2,27 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Fri May  8 19:34:31 2026
-# Process ID: 26236
-# Current directory: C:/Drive/Aca/COD/codd project/final_project/Nonoprocessor Extended Version/enhanced_version
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3040 C:\Drive\Aca\COD\codd project\final_project\Nonoprocessor Extended Version\enhanced_version\enhanced_version.xpr
-# Log file: C:/Drive/Aca/COD/codd project/final_project/Nonoprocessor Extended Version/enhanced_version/vivado.log
-# Journal file: C:/Drive/Aca/COD/codd project/final_project/Nonoprocessor Extended Version/enhanced_version\vivado.jou
+# Start of session at: Mon May 11 16:33:07 2026
+# Process ID: 28608
+# Current directory: C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/enhanced_version
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4304 C:\Drive\Aca\COD\codd project\Nonoprocessor Extended Version\enhanced_version\enhanced_version.xpr
+# Log file: C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/enhanced_version/vivado.log
+# Journal file: C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/enhanced_version\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Drive/Aca/COD/codd project/final_project/Nonoprocessor Extended Version/enhanced_version/enhanced_version.xpr}
+open_project {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/enhanced_version/enhanced_version.xpr}
 update_compile_order -fileset sources_1
-open_project {C:/Drive/Aca/COD/codd project/final_project/Nanoprocessor Optimized Version/Nanoprocessor/Nanoprocessor.xpr}
-update_compile_order -fileset sources_1
-close_project
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1

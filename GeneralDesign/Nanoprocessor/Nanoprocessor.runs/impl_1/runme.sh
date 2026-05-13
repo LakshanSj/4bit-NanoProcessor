@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Drive/Aca/COD/codd project/final_project/final_project/Nanoprocessor/Nanoprocessor.runs/impl_1'
+HD_PWD='C:/Drive/Aca/COD/codd project/Nanoprocessor Optimized Version/Nanoprocessor/Nanoprocessor.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

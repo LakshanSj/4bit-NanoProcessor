@@ -1,2 +1,16 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Drive/Aca/COD/codd project/enhanced_version/sim/top/Nanoprocessor_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity Nanoprocessor_tb
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/alu/ADD_SUB_4bit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ADD_SUB_4bit
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/alu/FA.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FA
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/alu/HA.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity HA
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/alu/RCA_4bit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity RCA_4bit
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/extra/binOp.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity binOp
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/extra/comparator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity comparator
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/alu/top_alu.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity top_alu
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/sim/alu/top_alu_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity top_alu_tb

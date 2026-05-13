@@ -17,47 +17,44 @@ proc create_report { reportName command } {
   }
 }
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {C:/Drive/Aca/COD/codd project/enhanced_version/enhanced_version/enhanced_version.cache/wt} [current_project]
-set_property parent.project_path {C:/Drive/Aca/COD/codd project/enhanced_version/enhanced_version/enhanced_version.xpr} [current_project]
+set_property webtalk.parent_dir {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/enhanced_version/enhanced_version.cache/wt} [current_project]
+set_property parent.project_path {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/enhanced_version/enhanced_version.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
-set_property ip_output_repo {c:/Drive/Aca/COD/codd project/enhanced_version/enhanced_version/enhanced_version.cache/ip} [current_project]
+set_property ip_output_repo {c:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/enhanced_version/enhanced_version.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  {C:/Drive/Aca/COD/codd project/enhanced_version/src/7seg/7seg.vhd}
-  {C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/ADD_SUB_4bit.vhd}
-  {C:/Drive/Aca/COD/codd project/enhanced_version/src/pc/Adder_3bit.vhd}
-  {C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/FA.vhd}
-  {C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/HA.vhd}
-  {C:/Drive/Aca/COD/codd project/enhanced_version/src/mux/MUX2_3bit.vhd}
-  {C:/Drive/Aca/COD/codd project/enhanced_version/src/top/Nanoprocessor.vhd}
-  {C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/RCA_4bit.vhd}
-  {C:/Drive/Aca/COD/codd project/enhanced_version/src/extra/binOp.vhd}
-  {C:/Drive/Aca/COD/codd project/enhanced_version/src/extra/comparator.vhd}
-  {C:/Drive/Aca/COD/codd project/enhanced_version/src/decoder/decoder_3_to_8.vhd}
-  {C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/flags.vhd}
-  {C:/Drive/Aca/COD/codd project/enhanced_version/src/extra/inst_selector.vhd}
-  {C:/Drive/Aca/COD/codd project/enhanced_version/src/instruction_decoder/instruction_decoder.vhd}
-  {C:/Drive/Aca/COD/codd project/enhanced_version/src/mux/mux2_4bit.vhd}
-  {C:/Drive/Aca/COD/codd project/enhanced_version/src/mux/mux8_4bit.vhd}
-  {C:/Drive/Aca/COD/codd project/enhanced_version/src/pc/pc.vhd}
-  {C:/Drive/Aca/COD/codd project/enhanced_version/src/pc/pc_register.vhd}
-  {C:/Drive/Aca/COD/codd project/enhanced_version/src/rom/program_rom.vhd}
-  {C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/register_4bit.vhd}
-  {C:/Drive/Aca/COD/codd project/enhanced_version/src/registers/register_bank.vhd}
-  {C:/Drive/Aca/COD/codd project/enhanced_version/src/slow_clock/slow_clock.vhd}
-  {C:/Drive/Aca/COD/codd project/enhanced_version/src/extra/step_button.vhd}
-  {C:/Drive/Aca/COD/codd project/enhanced_version/src/alu/top_alu.vhd}
-  {C:/Drive/Aca/COD/codd project/enhanced_version/src/7seg/seven_seg_top.vhd}
+  {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/7seg/7seg.vhd}
+  {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/alu/ADD_SUB_4bit.vhd}
+  {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/pc/Adder_3bit.vhd}
+  {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/alu/FA.vhd}
+  {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/alu/HA.vhd}
+  {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/mux/MUX2_3bit.vhd}
+  {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/top/Nanoprocessor.vhd}
+  {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/alu/RCA_4bit.vhd}
+  {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/extra/binOp.vhd}
+  {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/extra/comparator.vhd}
+  {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/decoder/decoder_3_to_8.vhd}
+  {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/registers/flags.vhd}
+  {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/extra/inst_selector.vhd}
+  {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/instruction_decoder/instruction_decoder.vhd}
+  {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/mux/mux2_4bit.vhd}
+  {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/mux/mux8_4bit.vhd}
+  {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/pc/pc.vhd}
+  {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/pc/pc_register.vhd}
+  {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/rom/program_rom.vhd}
+  {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/registers/register_4bit.vhd}
+  {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/registers/register_bank.vhd}
+  {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/slow_clock/slow_clock.vhd}
+  {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/extra/step_button.vhd}
+  {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/alu/top_alu.vhd}
+  {C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/src/7seg/seven_seg_top.vhd}
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -67,8 +64,8 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Drive/Aca/COD/codd project/enhanced_version/constrains/Nanoprocessor.xdc}}
-set_property used_in_implementation false [get_files {{C:/Drive/Aca/COD/codd project/enhanced_version/constrains/Nanoprocessor.xdc}}]
+read_xdc {{C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/constrains/Nanoprocessor.xdc}}
+set_property used_in_implementation false [get_files {{C:/Drive/Aca/COD/codd project/Nonoprocessor Extended Version/constrains/Nanoprocessor.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]
