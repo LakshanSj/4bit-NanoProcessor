@@ -114,7 +114,7 @@ Instructions are **14 bits** wide, with a **4-bit opcode** in bits `[13:10]`.
 ```
 
 | Opcode  | Mnemonic      | Operation                                           | Flags Updated   |
-|---------|---------------|-----------------------------------------------------|-----------------|
+|---------|---------------|-----------------------------------------------------|-----------------| 
 | `0000`  | `ADD Ra, Rb`  | Ra ← Ra + Rb                                        | Z, V            |
 | `0001`  | `SUB Ra, Rb`  | Ra ← Ra − Rb                                        | Z, V            |
 | `0010`  | `CMPU Ra, Rb` | Unsigned compare Ra vs Rb (no writeback)            | GT, EQ, LT      |
@@ -258,7 +258,7 @@ When **SW15 = '1'** and **SW14-SW1** are set to a valid 14-bit instruction encod
 Five processor status flags are maintained in the `flags` register and exposed as output ports:
 
 | Flag     | Port      | Meaning                                    |
-|----------|-----------|--------------------------------------------|
+|----------|-----------|---------------------------------------------|
 | **Z**    | `zero`    | Result of last ALU op was zero             |
 | **V**    | `overflow`| Arithmetic overflow occurred               |
 | **GT**   | `greater` | Last CMP/CMPU result: A > B               |
@@ -306,6 +306,8 @@ The ROM contains a demonstration program exercising the extended ISA:
 
 ```
 ExtendedDesign/
+├── enhanced_version/              # Vivado project files
+│   └── enhanced_version.xpr
 ├── constrains/
 │   └── Nanoprocessor.xdc          # Basys 3 pin constraints
 ├── sim/
@@ -329,7 +331,7 @@ ExtendedDesign/
 │   │   ├── Adder_3bit_tb.vhd
 │   │   ├── pc_register_tb.vhd
 │   │   └── pc_tb.vhd
-│   ├── register_bank/             # Extended register bank testbenches
+│   ├── register_bank/
 │   │   ├── flags_tb.vhd           # Flags register testbench
 │   │   ├── register_4bit_tb.vhd
 │   │   └── register_bank_tb.vhd
@@ -382,7 +384,7 @@ ExtendedDesign/
 
 Each module has a corresponding testbench in the `sim/` directory. To run in **Vivado**:
 
-1. Open the project in Vivado.
+1. Open the project in Vivado (or open `enhanced_version/enhanced_version.xpr`).
 2. Add all `src/` and `sim/` `.vhd` files to the project.
 3. Set the target `_tb.vhd` as the **top-level simulation source**.
 4. Click **Run Simulation → Run Behavioral Simulation**.
@@ -396,7 +398,7 @@ Key testbenches to prioritize:
 
 ## How to Run on FPGA
 
-1. **Open Vivado** and create a new RTL project.
+1. **Open Vivado** and create a new RTL project (or open `enhanced_version/enhanced_version.xpr`).
 2. Add all `.vhd` files from `src/` as design sources.
 3. Add `constrains/Nanoprocessor.xdc` as the constraints file.
 4. Set `Nanoprocessor.vhd` as the **top module**.
@@ -412,6 +414,8 @@ Key testbenches to prioritize:
 | Execute one instruction  | Press BTNC                           |
 | Inject custom instruction| SW15 → ON, set SW14–SW1 to encoding |
 
+> **Tip:** A pre-built bitstream is available in the root `BitStreams/Extended_Version.bit` — you can skip synthesis and program the board directly.
+
 ---
 
 ## Key Differences from General Design
@@ -422,13 +426,13 @@ Key testbenches to prioritize:
 | Opcode size              | 2-bit (4 opcodes)     | **4-bit (10 opcodes)**                   |
 | ISA                      | ADD, NEG, MOVI, JZR   | + SUB, CMP, CMPU, OR, AND, XOR, NOT      |
 | ALU architecture         | ADD_SUB_4bit only     | **top_alu** (arithmetic + logic + cmp)   |
-| Flag register            | Combinatorial zero    | **Dedicated synchronous flags module**   |
+| Flag register            | Simplified Z/V flags  | **Dedicated synchronous flags module**   |
 | Comparison output        | Zero flag only        | **GT, EQ, LT, Z, V flags**              |
 | Clock model              | Divided clock signal  | **Enable-pulse architecture**            |
 | Execution control        | Always running        | **Auto + Single-step modes**             |
 | Instruction source       | ROM only              | **ROM or live switch input**             |
-| Extra components         | None                  | `flags`, `binOp`, `comparator`, `inst_selector`, `step_button` |
+| Extra components         | flags (Z/V only)      | `flags` (5 flags), `binOp`, `comparator`, `inst_selector`, `step_button` |
 
 ---
 
-*Generated for the CO326 Computer Organization & Design project — University of Moratuwa.*
+*Computer Organization & Design — University of Moratuwa.*

@@ -110,6 +110,7 @@ Nanoprocessor  (top)
 ├── register_bank
 │   ├── decoder_3_to_8
 │   └── register_4bit  (×8)
+├── flags
 ├── mux8_4bit  (ALU input A)
 ├── mux8_4bit  (ALU input B)
 ├── mux8_4bit  (JZR register select)
@@ -147,6 +148,9 @@ Composed of three sub-components:
 
 ### `register_bank`
 Eight 4-bit registers (R0–R7). A `decoder_3_to_8` converts the 3-bit `write_sel` into individual write-enable lines for each `register_4bit` instance. R0 resets to `0000` and remains `0000` when not explicitly written (behaves as a zero register in practice).
+
+### `flags`
+A lightweight synchronous flag register tracking the **Zero (Z)** and **Overflow (V)** outputs from the ALU. Updated on each rising clock edge when `flag_en` and `enable` are both asserted.
 
 ### `ADD_SUB_4bit` (ALU)
 A 4-bit ripple-carry adder/subtractor built from:
@@ -204,8 +208,10 @@ The ROM contains a sequential summation program that accumulates the sum **1 + 2
 
 ```
 GeneralDesign/
+├── Nanoprocessor/                # Vivado project files
+│   └── Nanoprocessor.xpr
 ├── constrains/
-│   └── Nanoprocessor.xdc       # Basys 3 pin constraints
+│   └── Nanoprocessor.xdc        # Basys 3 pin constraints
 ├── sim/
 │   ├── 7seg/
 │   │   └── seven_seg_tb.vhd
@@ -226,6 +232,9 @@ GeneralDesign/
 │   │   ├── Adder_3bit_tb.vhd
 │   │   ├── pc_register_tb.vhd
 │   │   └── pc_tb.vhd
+│   ├── register_bank/
+│   │   ├── register_4bit_tb.vhd
+│   │   └── register_bank_tb.vhd
 │   ├── slow_clock/
 │   │   └── slow_clock_tb.vhd
 │   └── top/
@@ -254,6 +263,7 @@ GeneralDesign/
     │   ├── pc.vhd               # Program counter (top)
     │   └── pc_register.vhd      # 3-bit PC register
     ├── registers/
+    │   ├── flags.vhd            # Z/V flag register
     │   ├── register_4bit.vhd    # 4-bit D flip-flop register
     │   └── register_bank.vhd    # 8-register file
     ├── rom/
@@ -281,7 +291,7 @@ The top-level testbench (`Nanoprocessor_tb.vhd`) drives `reset` high for several
 
 ## How to Run on FPGA
 
-1. **Open Vivado** and create a new RTL project.
+1. **Open Vivado** and create a new RTL project (or open `Nanoprocessor/Nanoprocessor.xpr`).
 2. Add all `.vhd` files from `src/` as design sources.
 3. Add `constrains/Nanoprocessor.xdc` as the constraints file.
 4. Set `Nanoprocessor.vhd` as the **top module**.
@@ -295,4 +305,4 @@ The top-level testbench (`Nanoprocessor_tb.vhd`) drives `reset` high for several
 
 ---
 
-*Generated for the CO326 Computer Organization & Design project — University of Moratuwa.*
+*Computer Organization & Design — University of Moratuwa.*

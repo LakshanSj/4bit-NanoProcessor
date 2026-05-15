@@ -17,17 +17,23 @@ A complete, hierarchical **4-bit nanoprocessor** implemented in VHDL and synthes
 
 ```
 Nano-processor/
-├── GeneralDesign/          # Baseline 4-bit nanoprocessor
-│   ├── src/                # VHDL source files
-│   ├── sim/                # Testbenches
-│   ├── constrains/         # Basys 3 XDC constraints
-│   └── README.md           # Full design documentation
+├── BitStreams/                  # Pre-built FPGA bitstream files
+│   ├── Extended_Version.bit     # Bitstream for Extended Design
+│   └── Optimized_Version.bit    # Bitstream for optimised variant
 │
-└── ExtendedDesign/         # Feature-extended nanoprocessor
-    ├── src/                # VHDL source files
-    ├── sim/                # Testbenches
-    ├── constrains/         # Basys 3 XDC constraints
-    └── README.md           # Full design documentation
+├── GeneralDesign/               # Baseline 4-bit nanoprocessor
+│   ├── Nanoprocessor/           # Vivado project files
+│   ├── src/                     # VHDL source files
+│   ├── sim/                     # Testbenches
+│   ├── constrains/              # Basys 3 XDC constraints
+│   └── README.md                # Full design documentation
+│
+└── ExtendedDesign/              # Feature-extended nanoprocessor
+    ├── enhanced_version/        # Vivado project files
+    ├── src/                     # VHDL source files
+    ├── sim/                     # Testbenches
+    ├── constrains/              # Basys 3 XDC constraints
+    └── README.md                # Full design documentation
 ```
 
 ---
@@ -50,6 +56,8 @@ Nano-processor/
 5. Set `Nanoprocessor.vhd` as the top module
 6. Synthesize, implement, and generate bitstream
 7. Program the Basys 3 board
+
+> **Tip:** Pre-built bitstreams for the Extended Design are available in `BitStreams/` — you can program the Basys 3 directly without re-synthesizing.
 
 Refer to each design's individual `README.md` for complete pinout, ISA tables, and program details.
 
